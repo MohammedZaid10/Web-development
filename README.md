@@ -1,3 +1,1 @@
-# Web-development
-
-latest
+# Web development
