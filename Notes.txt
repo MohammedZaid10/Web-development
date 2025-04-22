@@ -85,3 +85,14 @@ Inline & Block elements in  HTML
 Inline elements are those elements which take the amount of space that is required
 Block elements are those elements whoch take the entire width
 
+===================================================================================
+
+Lesson 9:
+
+ID & Classes:
+
+ID is called using #
+Class is called using .
+
+===================================================================================
+
