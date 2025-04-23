@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Element selector */
+        div {
+            background-color: green;
+        }
+
+        /* Class elector*/
+        .yellow {
+            background-color: yellow;
+        }
+
+        /* Id selector*/
+        #red {
+            color: red
+        }
+
+        /* Child selector - should be directly child of parent selector */
+        div>p {
+            color: violet
+        }
+
+        /* Descendent selector - can be any child of parent selector, declare without space between parent and child selector */
+        div p {
+            color: violet
+        }
+
+        /* Universal selector */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='yellow'>
+        <article>
+            <p>I am a div</p>
+        </article>
+    </div>
+    <div id="red">
+        I AM A DIV
+    </DIV>
+</body>
+
+</html>
