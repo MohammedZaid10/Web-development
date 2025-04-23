@@ -1,0 +1,17 @@
+Lesson 14:
+
+Intro to CSS:
+
+    a. div is a selector in css and whatever declarations inside div is used the style will get applied to it
+
+=============================================================
+
+Lesson 15:
+
+Inline CSS:
+
+Internal CSS:
+
+External CSS:
+
+=============================================================
