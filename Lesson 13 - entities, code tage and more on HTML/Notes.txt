@@ -1,0 +1,5 @@
+HTML entities:
+HTML entities are a crucial part of HTML markup language. They enable you to display characters that are reserved in HTML or that aren't readily available on the keyboard
+
+Go through documentation of miscellaneous html in document:
+https://www.codewithharry.com/tutorial/html-code-tags

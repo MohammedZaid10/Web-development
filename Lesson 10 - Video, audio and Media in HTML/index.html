@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prateek Kuhad Concert Video Example</title>
+  <style>
+    .movie-card {
+      width: 300px;
+      height: 450px;
+      background-color: #141414;
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .movie-title {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      fill: white;
+      width: 50px;
+      height: 50px;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      display: none; /* Initially hidden */
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
-    <video src="video.mp4" controls></video>
+    
+  <div class="movie-card">
+    <h3 class="movie-title">Prateek Kuhad Concert Video</h3>
+    <!-- Video element, initially hidden -->
+    <video id="movie-video" controls>
+      <source src="Prateek Kuhad.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <!-- Play button (SVG) -->
+    <svg class="play-button" width="70" height="50" viewBox="0 0 24 24" onclick="playVideo()">
+      <path d="M8 5v14l11-7z"/>
+    </svg>
+  </div>
+
+  <script>
+    // Function to show the video and start playing
+    function playVideo() {
+      const video = document.getElementById("movie-video");
+      video.style.display = "block"; // Show video
+      video.play(); // Play the video
+    }
+  </script>
+
 </body>
 </html>

@@ -1,0 +1,11 @@
+HTML5 introduced a range of semantic tags that provide meaning to the structure of web content
+
+Semantic tags add meaning to your HTML. They tell both the browser and the developer what kind of content is being presented.
+
+Why Use Semantic Tags?
+They enhance SEO, improve accessibility, and make your code easier to read and maintain
+
+Go and read about semantic tags using below link:
+https://www.codewithharry.com/tutorial/html-semantic-tags
+
+Using HTML's semantic tags can greatly benefit both your website's SEO and the maintainability of your code. They offer a way to structure your HTML in a meaningful manner, making your website more accessible and easier to understand.
