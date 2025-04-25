@@ -56,3 +56,26 @@ selector:
         d. a.hover
         e. p:first-child
     </style>
+
+===============================================================================
+
+Lesson 18: CSS box model
+
+Multiple classes can be given to same Element
+box-sizing: border-box; - used for giving height or width only to margin and border and not to padding
+
+Conecpt: Margin collapse: When there are two margins overlapping then the biggest of two margins will be taken
+
+===============================================================================
+
+Lesson 19: Fonts, Text and color
+
+Fonts falback Conecept : Font-family
+Font-style : italics
+Link to know different font families: <!-- https://codepen.io/web-dot-dev/pen/yLojraG -->
+Link to know different names of colors: /* https://codepen.io/web-dot-dev/pen/ZELGraM */
+Hex color code
+read code to revisit all concepts
+
+===============================================================================
+
