@@ -1,3 +1,6 @@
+Go through all code again and search for links in every code
+
+Go through documentation of codewithharry
 Lesson 14:
 
 Intro to CSS:
@@ -110,3 +113,15 @@ To calculate the specificity value of the selector a.harryclass.rohan-class[href
 ========================================================================================
 
 Lesson 22 - CSS Sizing Units - px, rem, em, vh, vw, % & more 
+
+read code properly
+
+========================================================================================
+
+Lesson 23: CSS Display Property
+
+Display in css used for making a block element as inline element
+
+the video also gave simple overview on flex box and how to justify it to centre and also explkained grid functionality in glexbox
+
+========================================================================================
