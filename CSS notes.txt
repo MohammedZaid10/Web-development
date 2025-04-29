@@ -125,3 +125,35 @@ Display in css used for making a block element as inline element
 the video also gave simple overview on flex box and how to justify it to centre and also explkained grid functionality in glexbox
 
 ========================================================================================
+
+Lesson 24: CSS shadows and outlines
+
+Box shadows:
+    SYBTAX : .div-element { box-shadow: 5px 5px 15px 5px #888888; }
+
+text shadows:
+    SYNTAX: .text-element { text-shadow: 2px 2px 4px #888888; }
+
+Outlines:
+    Similar as borders
+
+    SYNTAX : .button-element:focus { outline: 2px solid blue; }
+    
+    Differences between Outlines and Borders:
+    While both can visually appear similar, outlines differ from borders in a few ways:
+        Position: Outlines don't take up space; they're drawn around the element, outside of any border.
+        Offset: Using the outline-offset property, you can set the space between an outline and the edge or border of an element.
+        Width: Borders can have varying widths on different sides, outlines have a uniform width. (border-radius)
+        Rounded Corners: Borders can have rounded corners using border-radius, while outlines generally cannot
+
+========================================================================================
+
+Lesson 25 : Styling Lists using CSS
+
+Read code as we hacve created nav bar for the first time as mostly lists are used inside a nav bar
+
+and we have used many list-styles to design the list inside our nav bar
+
+========================================================================================
+
+Lesson 26 - CSS Overflow Property
