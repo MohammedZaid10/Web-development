@@ -164,3 +164,31 @@ Read code as we hacve created nav bar for the first time as mostly lists are use
 
 Lesson 26 - CSS Overflow Property
 
+Read code to understand all CSS overflow property
+
+========================================================================================
+
+Lesson 28 - CSS Position property
+
+Set position relative to remove the static position of any box
+
+Navbor scrolling is shown in this video lecture and how it works using sticky, so navbar is continously visible once user scrolls through the page
+
+Concepts :
+Static Position
+Relative Position
+Absolute Position
+Fixed Position
+Sticky Position
+How transform, filter or perpective properties can also make an element appear as positioned - Inerview question and how it inherits its properties from which class
+
+Read code again, read notes and practise code again watch video again to understand later
+
+========================================================================================
+
+Lesson 29 - Excersice 3 - creating a card using HTML and CSS
+
+Done refer both my code and harry's code
+
+========================================================================================
+
