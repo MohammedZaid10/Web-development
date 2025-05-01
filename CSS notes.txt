@@ -157,3 +157,10 @@ and we have used many list-styles to design the list inside our nav bar
 ========================================================================================
 
 Lesson 26 - CSS Overflow Property
+
+Read code as we hacve created nav bar for the first time as mostly lists are used inside a nav bar
+
+========================================================================================
+
+Lesson 26 - CSS Overflow Property
+
