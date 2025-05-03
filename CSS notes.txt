@@ -192,3 +192,32 @@ Done refer both my code and harry's code
 
 ========================================================================================
 
+Lesson 30 - CSS variable
+
+Read code properly with all comments
+explore what other variables can be given
+
+========================================================================================
+
+Lesson 31 - CSS Media Queries
+
+used for making sites responsive
+SYNTAX:
+@media not|only mediatype and (expressions) {
+            CSS-Code;
+            }
+
+========================================================================================
+
+Lesson 34 - CSS Float & Clear
+
+never ever to be used. wasn used in old websites
+
+========================================================================================
+
+Lesson 35 - More on CSS Selectors
+
+Read all codes for all difdferent types of selectors 
+
+========================================================================================
+

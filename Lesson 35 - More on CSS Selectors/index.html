@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        /* .box:first-child{
+            background-color: aqua;
+        } */
+
+        /* .box:first-line{
+            background-color: bisque;
+        } My device first line only will be made as that color, so if i change device while responding then only first line of device will get changed */
+        
+        /* .boxes *{
+            color: violet;
+            border: 2px solid black;
+        } */
+        
+        /* .box, [data-color="primary"]{
+            margin-top: 45px;
+        } grouping multiple selectors */
+
+        /*data-color is an attribute here */
+
+        .box:nth-child(odd){
+            background-color: aquamarine;
+        }
+        .box:nth-last-child(2){
+            background-color: green;
+        }
+        .boxes::before{
+            content: "Zaid is good";
+            color: rgb(255, 0, 140);
+        }
+        /* Before and after are called as Pseudo Elements not selectors in CSS elements*/
+
+        .boxes::after{
+            content: "Zaid is great";
+            color: blue;
+        }
+        ::selection{
+            color: aqua;
+            background-color: black;
+        }
+        .box::first-letter{
+            color: Peru;
+            font-size: 30px;
+        }
+        input::placeholder{
+            color: rgb(67, 67, 75);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box"> 
+            Hey i am a box
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nostrum architecto dolore odio, voluptatum amet quas, quis eaque vero doloribus rem. Aperiam voluptates excepturi rerum aliquid, impedit illo veritatis suscipit ex recusandae, quisquam, laudantium velit sit optio? Voluptas suscipit, nihil soluta illo veritatis vitae doloremque?</p>
+        </div> 
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <input text="text" placeholder="Type your name here">
+    </div>
+</body>
+</html>
