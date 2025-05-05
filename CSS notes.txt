@@ -253,3 +253,12 @@ Other concepts:
 
 ========================================================================================
 
+Lesson 39 - CSS grid
+
+display: grid;
+grid-template-columns: 120px 100px;
+
+    1. Grid line
+    2. Grid Cell
+    3. Grid Track
+    4. Grid Area
