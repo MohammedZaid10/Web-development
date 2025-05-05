@@ -217,7 +217,39 @@ never ever to be used. wasn used in old websites
 
 Lesson 35 - More on CSS Selectors
 
-Read all codes for all difdferent types of selectors 
+Read all codes for all different types of selectors 
+
+========================================================================================
+
+Lesson 38 - CSS flexbox
+
+CSS Flex box:
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+Other concepts:
+    1. Play with properties inside "justify-content" and "align-center"
+    2. Play with flex-direction properties like row-reverse/column/column-reverse
+    3. Flex direction:
+        a. row
+        b. Column
+        c. Cross - Axis for (column ->)
+        d. Main - Axis for (row ->)
+        e. Cross start & Cross end
+        f. Main start & Main end
+        g. Corss-size
+        h. Main-size
+        See picture:    "C:\Users\zaidd\OneDrive\Desktop\Learning\Web development\Web-development\Lesson 38 - CSS flexbox\Screenshot 2025-05-05 175910.png"
+    4. Flex-wrap : to handle overflow so that your boxes go in next line and dont overflow
+    5. Align-content : to align items when we have multiple lines of items
+    6. Flex-flow : row wrap
+    7. gap : to give gap between each container
+    8. Item property : 
+        a. order 
+        b. Flex grow - takes the amount of space as given, for eaxampl if 2 is given then it will take 2 times of the amount of spac
+        c. Flex shrink - will shrink as specified, so if given 2, then as we responsive the device then by 2 times it will shrink
+        d. Align self - one items property can be overwritten
 
 ========================================================================================
 
