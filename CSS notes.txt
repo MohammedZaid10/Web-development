@@ -247,7 +247,7 @@ Other concepts:
     7. gap : to give gap between each container
     8. Item property : 
         a. order 
-        b. Flex grow - takes the amount of space as given, for eaxampl if 2 is given then it will take 2 times of the amount of spac
+        b. Flex grow - takes the amount of space as given, for example if 2 is given then it will take 2 times of the amount of spac
         c. Flex shrink - will shrink as specified, so if given 2, then as we responsive the device then by 2 times it will shrink
         d. Align self - one items property can be overwritten
 
