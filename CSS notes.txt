@@ -258,7 +258,26 @@ Lesson 39 - CSS grid
 display: grid;
 grid-template-columns: 120px 100px;
 
+Part-1
     1. Grid line
     2. Grid Cell
-    3. Grid Track
-    4. Grid Area
+    3. Grid Track - space in one entire column or space in one entire row
+    4. Grid Area - space in selcted Area
+    5. Grid row and column properties
+    6. Naming Grid lines
+
+Part-2
+    1. Grid template area - see syntax in grid2.html file
+    2. fr unit - see syntax in grid3.html file
+    3. gap property in grid - see syntax in grid3.html file :
+        a. dont use padding in grid, use gap
+        b. row gap and column gap
+    4. justify-items and align-items in container property : to give justification and alignment to each items inside a container - see syntax in grid3.html file 
+    5. justify-self and align-self : to give alignment and justification to each item - see syntax in grid3.html file
+    6. repeat syntax with minmax - see syntax in grid3.html file
+    7. Justify content and align contents : to justify the entire grid inside a container - see syntax in grid3.html file
+    (Read all different properties inside justify and align like start, end, center, etc.)
+    8. place-content: instead of using justify and align, we can use place and it will apply for both justofy and content
+
+========================================================================================
+
