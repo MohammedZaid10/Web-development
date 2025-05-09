@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css transformer</title>
+    <style>
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: beige;
+            border: 2px solid black;
+            /* transform: rotate(40deg); */
+            /* transform: rotate(0.5turn); */
+            /* transform: rotateX(45deg);  */ /* rotates along x,y & z planes*/
+            /* transform: scale(1.5);  */ /* scaleX or scaleY or scaleZ can be used and the box will become that many times larger so here it became 1.5 times larger*/
+            /* transform: scale3d(); */
+            /* transform: skew(5deg);  */ /* skewX or skewY but no skew on z-axis*/
+            /* transform: translate(200%);  */
+            /* tranlate is in percent and moves it along as per its size across different axis based on percentage porvided in x or y or z or 3d */
+            /* transform: translateX(-100%) skew(5deg) translateY(-70%);  */ /* this is how to use multiple transformer properties together */
+            transform: rotate(0.125deg);
+            transform-origin: 0% 0%; /* somewhat advanced topic, is used when we want to rotate something, default value is 50% 50% */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            width:100vw;
+            height: 80vh;
+            border: 2px solid purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            box
+        </div>
+    </div>
+</body>
+</html>
