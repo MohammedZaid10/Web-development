@@ -262,7 +262,7 @@ Part-1
     1. Grid line
     2. Grid Cell
     3. Grid Track - space in one entire column or space in one entire row
-    4. Grid Area - space in selcted Area
+    4. Grid Area - space in selected Area
     5. Grid row and column properties
     6. Naming Grid lines
 
@@ -283,13 +283,21 @@ Part-2
 
 Lesson 42 - CSS Transformers Masterclass
 
-transform is used to hide navbars
-            /* transform: rotate(40deg); */
-            /* transform: rotate(0.5turn); */
-            /* transform: rotateX(45deg);  */ /* rotates along x,y & z planes*/
-            /* transform: scale(1.5);  */ /* scaleX or scaleY or scaleZ can be used and the box will become that many times larger so here it became 1.5 times larger*/
-            /* transform: scale3d(); */
-            /* transform: skew(5deg);  */ /* skewX or skewY but no skew on z-axis*/
-            /* transform: translate(200%);  */
-            /* tranlate is in percent and moves it along as per its size across different axis based on percentage porvided in x or y or z or 3d */
-            /* transform: translateX(-100%) skew(5deg) translateY(-70%);  */ /* this is how to use multiple transformer properties together */
+a. transform is used to hide navbars
+b. different transform properties are:
+    /* transform: rotate(40deg); */
+    /* transform: rotate(0.5turn); */
+    /* transform: rotateX(45deg);  */ /* rotates along x,y & z planes*/
+    /* transform: scale(1.5);  */ /* scaleX or scaleY or scaleZ can be used and the box will become that many times larger so here it became 1.5 times larger*/
+    /* transform: scale3d(); */
+    /* transform: skew(5deg);  */ /* skewX or skewY but no skew on z-axis*/
+    /* transform: translate(200%);  */
+    /* tranlate is in percent and moves it along as per its size across different axis based on percentage porvided in x or y or z or 3d */
+    /* transform: translateX(-100%) skew(5deg) translateY(-70%);  */ /* this is how to use multiple transformer properties together */
+    transform: rotate(0.125deg);
+    transform-origin: 0% 0%; /* somewhat advanced topic, is used when we want to rotate something, default value is 50% 50% */
+c. Demo.html is created with syle.css by harry to help us visualize all the Transformers
+
+========================================================================================
+
+
