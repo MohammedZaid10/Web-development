@@ -300,4 +300,36 @@ c. Demo.html is created with syle.css by harry to help us visualize all the Tran
 
 ========================================================================================
 
+Lesson 45 - CSS Transition property
+
+a. Syntax:
+    transition-property: transform, background-color;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s; */
+    transition: all 3s ease-in-out 1s; 
+b. Instead of ease-in-out we can give anything else for timing function from inspect
+c. Transition is used on the properties on which we want the transitions to happen, so for example if we want the transition to happen on 
+
+========================================================================================
+
+Lesson 46 - CSS Animations
+
+a. Use animation for complex transitions and use Transition for simple transitions
+b. Animations are created using "keyframe" keyword inside the stylesheet and animation is defined inside the box where the animation needs to be Done and the keyframe is given with animation-namke(any name/variable) and we have to specify where it starts "from" and ends "to"
+c. Syntax:
+    animation-name: zaid;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 4s;
+    @keyframes zaid {
+            from{
+
+            }
+            to{
+                transform: translate(100px);
+            }
+        }
+
 
