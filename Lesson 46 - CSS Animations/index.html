@@ -13,22 +13,57 @@
         .box{
             width: 34px;
             height: 45vh;
-            background-color: aqua;
-            animation-name: zaid;
+            /* animation-name: zaid;
             animation-duration: 1s;
             animation-iteration-count: infinite;
             animation-timing-function: ease-in-out;
-            animation-delay: 4s;
+            animation-delay: 4s; */
+            /* animation-direction: reverse; */
+            /* animation-direction: alternate-reverse;
+            animation-play-state: paused;  */ /* gets paused at the exact position of box once enabled */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation: zaid 3s ease-in-out 4s infinite alternate-reverse forward; */
+            /* animation-fill-mode: forwards; */
+            animation: zaid 3s ease-in-out 3s 1,
+                        zaid2 3s ease-in-out 3s 1;
+        }
+        @keyframes zaid {
+            from{
+                background-color: aqua;
+            }
+            to{
+                background-origin: yellow;
+                transform: translate(100px);
+            }
         }
 
-        @keyframes zaid {
+        @keyframes zaid2 {
+            0%{
+                transform: rotate(100deg);
+            }
+            20%{
+                transform: rotate(200deg);
+            }
+            60%{
+                transform: rotate(300deg);
+            }
+            80%{
+                transform: rotate(400deg);
+            }
+            100%{
+                transform: rotate(500deg);
+            }
+            
+        }
+
+        /* @keyframes zaid {
             from{
 
             }
             to{
                 transform: translate(100px);
             }
-        }
+        } */
     </style>
 </head>
 <body>
