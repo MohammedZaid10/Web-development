@@ -329,6 +329,8 @@ c. Syntax:
     animation-direction: alternate-reverse;
     animation-play-state: paused; /* gets paused at the exact position of box once enabled */
     animation-fill-mode: forwards;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: zaid 3s ease-in-out 4s infinite alternate-reverse forward;
     @keyframes zaid {
             from{
                 background-color: aqua;
@@ -339,8 +341,23 @@ c. Syntax:
             }
         }
 d. read official documentations through md in vs code to understand all the use cases / properties under animation
-e. use comma(,) to 
+e. use comma(,) to provide multiple animation property at the same time
+    Syntax to provide multiple animations:
+        animation: zaid 3s ease-in-out 3s 1,
+                   zaid2 3s ease-in-out 3s 1;
 
+========================================================================================
 
+Lesson 49 - CSS Object-fit and Object-Position with Object-cover
 
+a. Object-fit and Object-position are used to fill the image inside a box or container as required
+b. Syntax:
+    object-position:top right;
+    object-position: 10px 10px;
+    object-position: 50% 50%;
+    object-fit: cover;
+    object-fit: fill;
+    object-fit: scale-down;
+    object-fit: contain;
+c. 
 
