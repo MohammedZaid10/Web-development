@@ -351,13 +351,29 @@ e. use comma(,) to provide multiple animation property at the same time
 Lesson 49 - CSS Object-fit and Object-Position with Object-cover
 
 a. Object-fit and Object-position are used to fill the image inside a box or container as required
-b. Syntax:
-    object-position:top right;
-    object-position: 10px 10px;
-    object-position: 50% 50%;
-    object-fit: cover;
-    object-fit: fill;
-    object-fit: scale-down;
-    object-fit: contain;
-c. 
+    Syntax:
+        object-position:top right;
+        object-position: 10px 10px;
+        object-position: 50% 50%;
+        object-fit: cover;
+        object-fit: fill;
+        object-fit: scale-down;
+        object-fit: contain;
+c. CSS background property : 
+    a. for making an image as a background image
+    b. no need to give image inside the body of html
+    c. background image is given as a url directly in the stylesheet
+    d. Syntax:
+        border: 2px solid black;
+        background-image: url("https://www.adobe.com/acrobat/hub/media_173d13651460eb7e12c0ef4cf8410e0960a20f0ee.jpeg?width=750&format=jpeg&optimize=medium");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-clip: padding-box;
+        background-clip: content-box;
+        background-clip: padding-box;
+
+========================================================================================
+
+
+
 
