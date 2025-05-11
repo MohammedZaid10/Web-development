@@ -292,7 +292,7 @@ b. different transform properties are:
     /* transform: scale3d(); */
     /* transform: skew(5deg);  */ /* skewX or skewY but no skew on z-axis*/
     /* transform: translate(200%);  */
-    /* tranlate is in percent and moves it along as per its size across different axis based on percentage porvided in x or y or z or 3d */
+    /* translate is in percent and moves it along as per its size across different axis based on percentage porvided in x or y or z or 3d */
     /* transform: translateX(-100%) skew(5deg) translateY(-70%);  */ /* this is how to use multiple transformer properties together */
     transform: rotate(0.125deg);
     transform-origin: 0% 0%; /* somewhat advanced topic, is used when we want to rotate something, default value is 50% 50% */
@@ -310,6 +310,7 @@ a. Syntax:
     transition: all 3s ease-in-out 1s; 
 b. Instead of ease-in-out we can give anything else for timing function from inspect
 c. Transition is used on the properties on which we want the transitions to happen, so for example if we want the transition to happen on 
+d. read official documentations through md in vs code to understand all the use cases
 
 ========================================================================================
 
@@ -318,18 +319,28 @@ Lesson 46 - CSS Animations
 a. Use animation for complex transitions and use Transition for simple transitions
 b. Animations are created using "keyframe" keyword inside the stylesheet and animation is defined inside the box where the animation needs to be Done and the keyframe is given with animation-namke(any name/variable) and we have to specify where it starts "from" and ends "to"
 c. Syntax:
+    All things under animation: name duration timing-function delay iteration-count direction fill-mode;     
     animation-name: zaid;
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     animation-delay: 4s;
+    animation-direction: reverse;
+    animation-direction: alternate-reverse;
+    animation-play-state: paused; /* gets paused at the exact position of box once enabled */
+    animation-fill-mode: forwards;
     @keyframes zaid {
             from{
-
+                background-color: aqua;
             }
             to{
+                background-origin: yellow;
                 transform: translate(100px);
             }
         }
+d. read official documentations through md in vs code to understand all the use cases / properties under animation
+e. use comma(,) to 
+
+
 
 
