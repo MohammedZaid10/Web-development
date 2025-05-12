@@ -122,14 +122,14 @@ Lesson 23: CSS Display Property
 
 Display in css used for making a block element as inline element
 
-the video also gave simple overview on flex box and how to justify it to centre and also explkained grid functionality in glexbox
+the video also gave simple overview on flex box and how to justify it to centre and also explained grid functionality in flexbox
 
 ========================================================================================
 
 Lesson 24: CSS shadows and outlines
 
 Box shadows:
-    SYBTAX : .div-element { box-shadow: 5px 5px 15px 5px #888888; }
+    SYNTAX : .div-element { box-shadow: 5px 5px 15px 5px #888888; }
 
 text shadows:
     SYNTAX: .text-element { text-shadow: 2px 2px 4px #888888; }
@@ -150,7 +150,7 @@ Outlines:
 
 Lesson 25 : Styling Lists using CSS
 
-Read code as we hacve created nav bar for the first time as mostly lists are used inside a nav bar
+Read code as we have created nav bar for the first time as mostly lists are used inside a nav bar
 
 and we have used many list-styles to design the list inside our nav bar
 
@@ -158,7 +158,7 @@ and we have used many list-styles to design the list inside our nav bar
 
 Lesson 26 - CSS Overflow Property
 
-Read code as we hacve created nav bar for the first time as mostly lists are used inside a nav bar
+Read code
 
 ========================================================================================
 
@@ -176,11 +176,15 @@ Navbor scrolling is shown in this video lecture and how it works using sticky, s
 
 Concepts :
 Static Position
-Relative Position
-Absolute Position
-Fixed Position
-Sticky Position
-How transform, filter or perpective properties can also make an element appear as positioned - Inerview question and how it inherits its properties from which class
+Relative Position : when a box is given as postion relative then it will overwrite its default posion property from static and then we can move the box around as we want
+Z-index : to decide which box ill get stacked on top by giving 0 or 1
+Absolute Position : will get positioned based on the first parent class that is positioned
+Fixed Position : used to fix a box to its postion so taht even if we scroll, box is visible
+Sticky Position : it will get sticky once we scroll after we reach it
+
+Exception:
+Question: How transform, filter or perpective properties can also make an element appear as positioned - Inerview question and how it inherits its properties from which class
+Answer: even if there is no parent class or tag that is positioned, if any parent class or tag contains any transform, filter or perspective property then that class/box will get positioned to that parent class/tag which contains the transform/filter/perspective property
 
 Read code again, read notes and practise code again watch video again to understand later
 
@@ -359,7 +363,7 @@ a. Object-fit and Object-position are used to fill the image inside a box or con
         object-fit: fill;
         object-fit: scale-down;
         object-fit: contain;
-c. CSS background property : 
+b. CSS background property : 
     a. for making an image as a background image
     b. no need to give image inside the body of html
     c. background image is given as a url directly in the stylesheet
@@ -374,6 +378,29 @@ c. CSS background property :
 
 ========================================================================================
 
+Lesson 50 - CSS Filters
 
+a. Just know about different filters which are used to add filters like opacity,blur,brightness,contrast,etc. to images
+b. Syntax:
+    filter: blur(5px);
+    filter: brightness(150%) contrast(6.5);
+    filter: contrast(40%);
+    filter: grayscale(100%); /* gray scale is used to make image black-white */
+    filter: sepia(100%); /* sepia is used to make an image look like old picture */
+    filter: invert(75%);
+    filter: opacity(25%); 
 
+========================================================================================
+
+Lesson 51 - excercise 8 solution from video 48
+
+========================================================================================
+
+Lesson 52 - Figma basics
+
+========================================================================================
+
+Lesson 53 -  Project Netflix clone
+
+========================================================================================
 
