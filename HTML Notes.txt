@@ -87,7 +87,7 @@ Lesson 8:
 Inline & Block elements in  HTML
 
 Inline elements are those elements which take the amount of space that is required
-Block elements are those elements whoch take the entire width
+Block elements are those elements which take the entire width
 
 ===================================================================================
 
@@ -133,3 +133,4 @@ Go through documentation of miscellaneous html in document:
 https://www.codewithharry.com/tutorial/html-code-tags
 
 ===================================================================================
+
