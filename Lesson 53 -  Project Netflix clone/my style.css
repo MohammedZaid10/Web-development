@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("Assets/Images/netflix\ background\ image2.jpg");
+    background-position: center center;
+    background-size: max(2000px, 100vw);
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+body{
+    background-color: black;
+}
+.main .box {
+    position: absolute;
+    height: 80%;
+    width: 100%;
+}
+
+nav {
+    max-width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    padding: 20px;
+}
+
+nav img {
+    width: 153px;
+    color: red;
+    position: relative;
+    z-index: 0;
+}
+
+nav button {
+    position: relative;
+    z-index: 0;
+}
+
+.hero {
+    font-family: "Martel Sans", sans-serif;
+    font-style:normal;
+    height: 80%;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
+    padding: 23px;
+}
+
+.hero > :first-child{
+    font-size: 48px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.hero > :nth-child(2){
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hero > :nth-child(3){
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.line{
+    height: 7px;
+    background-color: grey;
+}
+
+.box2{
+    box-sizing: border-box;
+    height: 10%;
+    position: absolute;
+    align-items: center;
+    border: solid .25rem transparent;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
+    width: 100%;
+}
+
+.line{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    border-radius: inherit;
+    background: linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84%);
+}
