@@ -5,3 +5,5 @@ Node.js was created to see the output of the web browser runtime by the creator 
 Read code to know syntax of alert, console.log, var (variable), prompt, confirm and basic if statement
 
 Not all commands that we run in js can be run using node.js like alerts, prompt, confirm as they can be only seen using a browser
+
+we can add titles and change background color which will become inline css using javascript itself without making change to html or css file - see code

@@ -11,3 +11,7 @@ else{
     console.log('Computer is not burning')
 }
 console.log("Your number is " + a)
+
+document.title = "Hey I am good"
+
+document.body.style.backgroundColor = 'red'
