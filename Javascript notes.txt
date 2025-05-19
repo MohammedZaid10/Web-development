@@ -7,3 +7,48 @@ Read code to know syntax of alert, console.log, var (variable), prompt, confirm 
 Not all commands that we run in js can be run using node.js like alerts, prompt, confirm as they can be only seen using a browser
 
 we can add titles and change background color which will become inline css using javascript itself without making change to html or css file - see code
+
+==================================================================================
+
+Lesson 55 - JavaScript Variables, Data Types & Objects
+
+a. Javascript variables are case-sensitive
+b. var is globally scoped, let and const are locally scoped
+c. we should let instead of var in most of the cases
+d. when a variable is defined as const, it cannot be changed
+f. Primitive data types:
+    let x = 93;
+    let y = "Zaid";
+    let z = 3.55;
+    let p = true;
+    let q = undefined;
+    let r = null;
+
+    console.log(x,y,z,p,q,r)
+    console.log(typeof x,typeof y,typeof z,typeof p,typeof q,typeof r)
+    O/P : 93 'Zaid' 3.55 true undefined null
+    O/P : number string number boolean undefined object
+e. Objects:
+    let o = {
+    "name" : "Zaid",
+    "job code" : 5609,
+    "is_handsome" : true
+    }
+
+    console.log(o);
+    o.salary = '100crores';
+    console.log(o);
+    o.salary = '500crores';
+    console.log(o);
+
+    O/P: 
+    {name: 'Zaid', job code: 5609, is_handsome: true}
+    {name: 'Zaid', job code: 5609, is_handsome: true, salary: '100crores'}
+    {name: 'Zaid', job code: 5609, is_handsome: true, salary: '500crores'}
+
+f. read handwritten notes for this lesson 55 as there are extra points not thoought in the video
+g. practise all the challenges given in the handwritten notes
+
+=============================================================================
+
+Lesson 56 : JavaScript Conditionals : if, else if, else ladder
