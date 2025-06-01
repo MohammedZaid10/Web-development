@@ -173,3 +173,10 @@ q. classic for loop
 r. forEach loop
 s. forin loop (only for json objects, not for arrays)
 t. forof loop (created for arrays)
+u. map() - see code of mfr.js
+v. filter() - see code of mfr.js
+w. reduce() - see code of mfr.js, best use case for factorial
+x. Array.from("Harry")
+    o/p:
+    (5) ['H', 'a', 'r', 'r', 'y']
+
