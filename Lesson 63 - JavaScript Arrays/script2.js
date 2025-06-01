@@ -51,3 +51,10 @@ for (const key in obj) {
 for (const ab of a) {
     console.log(ab)
 }
+
+// o/p:
+// 1
+// 3
+// 2
+// 3
+// 244
