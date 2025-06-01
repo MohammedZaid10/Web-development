@@ -118,3 +118,10 @@ do{
     console.log(i);
     i++;
 }while(i > 10)
+
+====================================================================
+
+Lesson 58 - JavaScript Functions
+
+Read code which also has output with it
+

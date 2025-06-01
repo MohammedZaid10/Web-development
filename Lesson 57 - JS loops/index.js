@@ -21,7 +21,7 @@ for (const ha of 'harry') {
     console.log(ha)
 }
 
-let i =7;
+let i = 7;
 
 while (i < 10) {
     console.log(i)
@@ -31,4 +31,4 @@ while (i < 10) {
 do{
     console.log(i);
     i++;
-}while(i > 10)
+}while(i < 10)
