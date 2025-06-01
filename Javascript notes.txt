@@ -125,3 +125,51 @@ Lesson 58 - JavaScript Functions
 
 Read code which also has output with it
 
+====================================================================
+
+Lesson 60 - JavaScript Strings
+
+Read code which also has output with it
+
+====================================================================
+
+Lesson 63 - JavaScript Arrays
+
+a. JS arrays are mutable
+b. arr.length
+c. typeof arr (o/p : object)
+d. arr[0] = 356; / to change an element in an array using its index
+e. console.log(arr.toString()) /  to change an array of int type to string type
+f. console.log(arr.join(" and ")) (o/p : 5666 and 2 and 3 and 4 and 5)
+g. a.pop() - to remove last element
+h. a.push('harry', 100) - to add harry and 700 and end of array
+i.  a.shift() - to remove first element from an array
+j. a.unshift('jack') - to add jack at starting of the array
+k. delete a[4] - 4th element will get deleted but array lenghth will be same and memory allocation remains
+l. concat (does not chnage the existing array):
+    let a1 = [1,2,3]
+    let a2 = [4,5,6]
+    let a3 = [7,8,9]
+    let a4 = a1.concat(a2,a3)
+m. a.sort() - this will sort the array (also sort can take a comparison operator, read and experiment this from notes of harry)
+n. let a=[1,2,3,4,5,6,7]
+    a.splice(1,4, 233,333,433) - 1 is the position from which number should getting deleted from and 4 is the number of elements from the given position that should be deleted and then we are just adding 3 elements 233, 333,433 but we can add as manay as elements that we want
+    console.log(a)
+    o/p: [1,6,7]
+o.  let a= [1,2,3,4,5]
+    a.slice(2) / starting position
+    o/p : [3,4,5]
+    let a= [1,2,3,4,5]
+    b = a.slice(1,3) / start & end position
+    console.log(b)
+    console.log(a)
+    o/p: b = [1,4,5]
+    a =[1,2,3,4,5]
+    - slicing does not remove the elements, it just helps with extracting the required elements from the array, it creates a new array
+p. a.reverse()
+
+Looping over arrays
+q. classic for loop
+r. forEach loop
+s. forin loop (only for json objects, not for arrays)
+t. forof loop (created for arrays)
