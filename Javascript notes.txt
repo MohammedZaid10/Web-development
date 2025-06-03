@@ -180,3 +180,49 @@ x. Array.from("Harry")
     o/p:
     (5) ['H', 'a', 'r', 'r', 'y']
 
+====================================================================
+
+Lesson 66 - JavaScript DOM
+
+Document Object Model - helps with mapping the entire document in the object where you get all the content of the page
+
+Window contains:
+DOM
+BOM ($0)
+Javascript Core
+
+Read this later:
+https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+
+====================================================================
+
+Lesson 67 - JavaScript DOM - Child, parent & Sibling nodes
+
+document.body
+document.body.childNodes[0]
+document.body.childNodes[1]
+document.body.childNodes[1].childNodes:
+NodeList(11) [text, div.box, text, div.box, text, div.box, text, div.box, text, div.box, text]
+- we get text also because these are the spaces that are there between each syntax
+
+let chn = document.body.childNodes[1]
+chn - just give the variable and press enter to see the result stored in Variables
+chn.firstChild - this will give you the first text field
+chn.firstElementChild - this will give you the first field which has a meaningful element like a div or span
+chn.lastElementChild
+chn.lastElementChild.style.color = "red";
+chn.lastElementChild.style.backgroundColor = "green";
+document.body.firstElementChild.children:
+HTMLCollection(5) [div.box, div.box, div.box, div.box, div.box]
+document.body.firstElementChild.children[1]
+document.body.firstElementChild.children[0].nextElementSibling :
+<div class=​"box">​Box 2​</div>​
+document.body.firstElementChild.children[1].previousElementSibling :
+<div class=​"box">​Box 1​</div>​
+document.body.firstElementChild.children[0].previousSibling: 
+#text
+document.body.firstElementChild.children[0].parentElement: 
+<div class=​"container">​…​</div>​
+tables 9read Harry's notes):
+document.body.children[1].rows :
+HTMLCollection(2) [tr, tr]
