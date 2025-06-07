@@ -231,3 +231,5 @@ HTMLCollection(2) [tr, tr]
 
 Lesson 68 - JavaScript Selecting by IDs, Classes and More
 
+
+
