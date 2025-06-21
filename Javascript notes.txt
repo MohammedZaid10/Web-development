@@ -297,18 +297,6 @@ Lesson 75 - JavaScript Callbacks & Promises
 
 ====================================================================
 
+Lesson 76 - Async or Await & Fetch API in JavaScript
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Instead of using then function , we can just use async & await function to run a function only once its previous function is completed
