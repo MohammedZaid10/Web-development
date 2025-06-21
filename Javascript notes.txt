@@ -242,6 +242,19 @@ Attribute methods
 
 document.designMode = "on" - to edit any web page manually
 
+====================================================================
+
+Lesson 74 - Events, Event Bubbling, setInterval & setTimeout
+
+read code 
+
+we use clearInterval to cancel setInterval
+
+we use clearTimeout to cancel setTimeout
+
+====================================================================
+
+Lesson 75 - JavaScript Callbacks & Promises
 
 
 
