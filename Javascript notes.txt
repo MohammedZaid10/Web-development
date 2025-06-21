@@ -248,6 +248,8 @@ Lesson 74 - Events, Event Bubbling, setInterval & setTimeout
 
 read code 
 
+eventbubbling is when we add an event, Javascript assumes that the event is for the entire html document, so in order to stop this we use "stopPropagation" so that the event is only limited to that element
+
 we use clearInterval to cancel setInterval
 
 we use clearTimeout to cancel setTimeout
@@ -256,7 +258,42 @@ we use clearTimeout to cancel setTimeout
 
 Lesson 75 - JavaScript Callbacks & Promises
 
+🎯 Key Takeaways for quick navigation:
 
+00:00 📚 Introduction to Callback Functions and Promises
+- Callback functions are functions passed into another function as an argument, invoked inside the outer function to complete an action.
+- Asynchronous nature of JavaScript explained with examples of setTimeout and console.log order of execution.
+- Callback functions allow for asynchronous programming but can lead to callback hell or pyramid of doom.
+
+04:06 🔄 Managing Callback Hell with Promises
+- Promises provide a solution to callback hell, offering a cleaner and more manageable way to handle asynchronous code.
+- Promises represent a guarantee of code execution, useful for waiting on tasks without blocking other operations.
+- Creating and utilizing promises allows for more organized and structured code, improving readability and maintainability.
+
+17:21 🔒 Promises and Resolve/Reject Mechanism
+- Understanding the concept of promises and their role in code execution.
+- Explanation of the resolve and reject functions within a promise.
+- Demonstrating how to use `resolve` to indicate successful completion of a task and `reject` to handle errors.
+
+19:34 🛠️ Handling Promise Results and Errors
+- Using `.then` to access the resolved value of a promise and perform further actions.
+- Implementing `.catch` to handle errors that occur during promise execution.
+- Emphasizing the importance of error handling in asynchronous code execution.
+
+24:15 🔄 Promise Chaining and Promise.finally
+- Understanding promise chaining to pass resolved values between promises.
+- Introduction to `promise.finally` for performing cleanup actions after promise execution.
+- Explaining the concept of passing resolved values through a chain of `.then` handlers.
+
+26:06 🤝 Promise.all and Promise.race
+- Utilizing `Promise.all` to wait for multiple promises to resolve and gather their results.
+- Introduction to `Promise.race` for determining the fastest resolving promise among multiple promises.
+- Illustrating scenarios where `Promise.all` and `Promise.race` are beneficial, such as handling multiple network requests or downloads.
+
+28:54 ⚖️ Understanding Promise.all settled and Promise.resolve/Promise.reject
+- Explaining `Promise.all settled` to handle both resolved and rejected promises.
+- Introducing `Promise.resolve` and `Promise.reject` to create promises with predefined states.
+- Demonstrating how to handle promises with different states and reasons using these methods.
 
 
 
