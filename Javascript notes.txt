@@ -295,6 +295,8 @@ Lesson 75 - JavaScript Callbacks & Promises
 - Introducing `Promise.resolve` and `Promise.reject` to create promises with predefined states.
 - Demonstrating how to handle promises with different states and reasons using these methods.
 
+====================================================================
+
 
 
 
