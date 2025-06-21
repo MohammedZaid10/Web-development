@@ -25,3 +25,10 @@ console.log("b = ", b)
 let c = a[4].closest("container")
 console.log(c)
 
+let d = document.querySelector(".container").contains(e[2]);
+
+let f = document.querySelector(".container").contains(e[0]);
+
+let g = document.querySelector(".container").contains(document.querySelector("body"))
+
+let h = document.querySelector("body").contains(document.querySelector(".container"))
