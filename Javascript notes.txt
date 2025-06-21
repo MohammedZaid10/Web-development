@@ -191,7 +191,7 @@ DOM
 BOM ($0)
 Javascript Core
 
-Read this later:
+Read this later :
 https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
 
 ====================================================================
@@ -231,13 +231,16 @@ HTMLCollection(2) [tr, tr]
 
 Lesson 68 - JavaScript Selecting by IDs, Classes and More
 
+Read code 
 
+====================================================================
 
+Lesson 71 - Inserting and removing elements in JavaScript
 
+Inner and Outer html functions
+Attribute methods
 
-
-
-
+document.designMode = "on" - to edit any web page manually
 
 
 

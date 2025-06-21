@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            color : red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="display: flex">
+        <div class="box" style="display: flex;" data-createdby ="harry" data-conceptby = "rohan">
+            I am a box
+            I am a box
+        </div>
+    </div>
+    <script>
+        // Inner and Outer html functions
+        a = document.querySelector(".box")
+        console.log(a)
+        b = document.querySelector(".box").innerHTML
+        console.log(b)
+        c = document.querySelector(".container").innerHTML
+        console.log(c)
+        d = document.querySelector(".box").innerText
+        console.log(d)
+        e = document.querySelector(".container").innerText
+        console.log(e)
+        f = document.querySelector(".container").outerHTML
+        console.log(f)
+        g = document.querySelector(".container").tagName
+        console.log(g)
+        h = document.querySelector(".container").nodeName
+        console.log(h)
+        i = document.querySelector(".container").textContent
+        console.log(i)
+        // j = document.querySelector(".container").hidden
+        // console.log(j)
+        // document.querySelector(".container").hidden = true
+        document.querySelector(".container").innerHTML = 'hey i am zaid'
+
+        // Attribute methods
+        k = document.querySelector(".box").hasAttribute("style")
+        console.log(k)
+        l = document.querySelector(".box").getAttribute("style")
+        console.log(l)
+        k = document.querySelector(".box").setAttribute("style", "display: inline")
+        console.log(k)
+        k = document.querySelector(".box").attribute
+        console.log(k)
+        k = document.querySelector(".box").removeAttribute("style")
+        console.log(k)
+
+         // let div = document.createElement("div");
+        // div.innerHTML = "I have been inserted <b>by harry</b>"
+        // div.setAttribute("class", "created");
+        // document.querySelector(".container").before(div);
+        let cont = document.querySelector(".container")
+        cont.insertAdjacentHTML("beforebegin", "<b> I am under the water. Please h elp me here too much raining.... iuuuuooooo</b>")
+
+        document.querySelector(".container").classList
+        document.querySelector(".container").classList.add("harry")
+        document.querySelector(".container").classList.remove("harry")
+        document.querySelector(".container").classList.toggle("box")
+        document.querySelector(".container").className
+
+    </script>
+</body>
+
+</html>
