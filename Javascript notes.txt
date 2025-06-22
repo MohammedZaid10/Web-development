@@ -14,7 +14,7 @@ we can add titles and change background color which will become inline css using
 
 Lesson 55 - JavaScript Variables, Data Types & Objects
 
-a. Javascript variables are case-sensitive
+a. JavaScript variables are case-sensitive
 b. var is globally scoped, let and const are locally scoped
 c. we should let instead of var in most of the cases
 d. when a variable is defined as const, it cannot be changed
@@ -189,7 +189,7 @@ Document Object Model - helps with mapping the entire document in the object whe
 Window contains:
 DOM
 BOM ($0)
-Javascript Core
+JavaScript Core
 
 Read this later :
 https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
@@ -248,7 +248,7 @@ Lesson 74 - Events, Event Bubbling, setInterval & setTimeout
 
 read code 
 
-eventbubbling is when we add an event, Javascript assumes that the event is for the entire html document, so in order to stop this we use "stopPropagation" so that the event is only limited to that element
+eventbubbling is when we add an event, JavaScript assumes that the event is for the entire html document, so in order to stop this we use "stopPropagation" so that the event is only limited to that element
 
 we use clearInterval to cancel setInterval
 
@@ -322,4 +322,32 @@ finally is used when you want a peice of code to execute inside a function regar
 ====================================================================
 
 Lesson 80 - Classes anbd Objects - Object Oriented Programming
+Prototype in objects in JS
+Classes and objects
+Inheritance using extends keyword
+Method Overriding
+Super keyword
+Constructor Overriding
+Static method
+Getters and setters
+Instanceof Operator
 
+====================================================================
+
+Lesson 82 - Advanced JavaScript Topics
+
+IIFE - Immediately Invoked Function Expression
+Destructuring Arrays 
+Destructuring Objects
+Spread for Arrays
+Spread for Objects
+JS engine
+Closure
+
+====================================================================
+
+Lesson 83 - JavaScript interview questions
+
+Do all 14 questions for practise
+
+====================================================================
