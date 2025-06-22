@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking Simulator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Noto+Sans:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Poppins:wght@300;400;700&display=swap');
+
+        body {
+            background-color: green;
+            color: white;
+            font-family: 'Martel Sans', sans-serif;
+            font-size: 30px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Returns a random delay between 1 and 7 seconds (inclusive)
+        const randomDelay = () => {
+            return new Promise((resolve) => {
+                const delaySeconds = Math.floor(Math.random() * 7) + 1;
+                setTimeout(() => {
+                    resolve();
+                }, delaySeconds * 1000);
+            });
+        };
+
+        // Adds an item to the DOM and manages its blinking dots,
+        // ensuring a smooth final animation to "..." or "!"
+        const addItem = async (itemText, finalMark = "...") => {
+            let div = document.createElement("div");
+            document.body.append(div);
+
+            let currentDots = ""; // Tracks dots for the main blinking phase
+            let intervalId;       // For the main blinking (300ms)
+
+            // Function to update the blinking dots for the current div
+            const updateDots = () => {
+                if (currentDots.length < 3) {
+                    currentDots += ".";
+                } else {
+                    currentDots = ""; // Reset to blink from start again
+                }
+                div.innerHTML = itemText + currentDots;
+            };
+
+            div.innerHTML = itemText; // Initialize with the base text
+            intervalId = setInterval(updateDots, 300); // Start main blinking
+
+            await randomDelay(); // Wait for the main random delay (1 to 7 seconds)
+
+            clearInterval(intervalId); // Stop the regular blinking
+
+            // --- Start of new logic: Ensure rapid completion of dots or clear for "!" ---
+            
+            // Get the current number of dots actually displayed when the randomDelay finished
+            let currentDisplayedDots = div.innerHTML.replace(itemText, '');
+
+            // Create a Promise to manage the rapid final animation sequence
+            const completeDotsPromise = new Promise(resolve => {
+                // If it's already in the desired final state, or ready for final mark, resolve immediately
+                if (currentDisplayedDots === finalMark || (finalMark === "!" && currentDisplayedDots.length === 0)) {
+                    div.innerHTML = itemText + finalMark; // Ensure final mark is set if animation skipped
+                    resolve();
+                    return;
+                }
+
+                let tempInterval;
+                let animatedDots = currentDisplayedDots; // Start animation from current state
+
+                if (finalMark === "!") {
+                    // For "Hacking Complete!", rapidly remove dots then add "!"
+                    tempInterval = setInterval(() => {
+                        if (animatedDots.length > 0) {
+                            animatedDots = animatedDots.slice(0, animatedDots.length - 1);
+                            div.innerHTML = itemText + animatedDots;
+                        } else {
+                            // All dots removed, set final mark and resolve
+                            clearInterval(tempInterval);
+                            div.innerHTML = itemText + finalMark;
+                            resolve();
+                        }
+                    }, 300); // <-- Changed to 300ms for smoother removal
+                } else {
+                    // For "...", rapidly add dots until 3 are reached
+                    tempInterval = setInterval(() => {
+                        if (animatedDots.length < 3) {
+                            animatedDots += ".";
+                            div.innerHTML = itemText + animatedDots;
+                        } else {
+                            // Reached 3 dots, set final mark (which is "...") and resolve
+                            clearInterval(tempInterval);
+                            div.innerHTML = itemText + finalMark; // Guarantees "..."
+                            resolve();
+                        }
+                    }, 300); // <-- Changed to 300ms for smoother addition
+                }
+            });
+
+            await completeDotsPromise; // Wait for this rapid final animation to finish
+            // --- End of new logic ---
+        };
+
+        // Main function to run the simulation
+        async function main() {
+            const messages = [
+                "Initializing Hacking",
+                "Reading your Files",
+                "Password files Detected",
+                "Sending all passwords and personal files to server",
+                "Cleaning up"
+            ];
+
+            for (const itemText of messages) {
+                await addItem(itemText); // These will end with "..."
+            }
+
+            // The final "Hacking Complete" message will end with "!"
+            await addItem("Hacking Complete", "!"); 
+        }
+
+        main();
+    </script>
+</body>
+
+</html>

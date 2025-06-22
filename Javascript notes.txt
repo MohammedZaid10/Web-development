@@ -300,3 +300,26 @@ Lesson 75 - JavaScript Callbacks & Promises
 Lesson 76 - Async or Await & Fetch API in JavaScript
 
 Instead of using then function , we can just use async & await function to run a function only once its previous function is completed
+
+settle means resolve or reject
+resolve means promise has settled successfully
+reject means promise has not settled successfully
+
+Read this : https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
+====================================================================
+
+Lesson 78 - Exercise 14 - hacker's Terminal
+
+read code
+
+====================================================================
+
+Lesson 79 - JavaScript try catch & Error Handling
+
+finally is used when you want a peice of code to execute inside a function regardless if a function is already returned inside the try or catch block
+
+====================================================================
+
+Lesson 80 - Classes anbd Objects - Object Oriented Programming
+
