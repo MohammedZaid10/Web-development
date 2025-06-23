@@ -1,0 +1,26 @@
+{
+  "name": "learning",
+  "version": "1.0.0",
+  "description": "This is for learning",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohammedZaid10/Web-development.git"
+  },
+  "keywords": [
+    "learning"
+  ],
+  "author": "Zaid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohammedZaid10/Web-development/issues"
+  },
+  "homepage": "https://github.com/MohammedZaid10/Web-development#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "slugify": "^1.6.6"
+  }
+}
