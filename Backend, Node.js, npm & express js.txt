@@ -1,9 +1,25 @@
-====================================================================
-
 Lesson 85 - Backend, Node.js & npm
 
 dont put node_modules folder in git
 
 Read : https://nodejs.org/en/learn/getting-started/introduction-to-nodejs
 
+Commands: 
+node --version
+npm --version
+npm init
+npm install slugify
+npm install - to download everything from packages.json file which will create the node_modules folder
+npm install express
+
 ====================================================================
+
+Lesson 86 - CommonJs Vs EcmaScript Modules
+
+Commands:
+npm init -y
+npm i express jsonwebtoken dotenv
+npm install --global nodemon
+nvm use 20
+
+Change type to module from default common in package.json
