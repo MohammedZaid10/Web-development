@@ -23,3 +23,14 @@ npm install --global nodemon
 nvm use 20
 
 Change type to module from default common in package.json
+
+====================================================================
+
+Lesson 87 - Working with Files: fs and path Modules
+
+https://nodejs.org/en/learn/manipulating-files/working-with-file-descriptors-in-nodejs#working-with-file-descriptors-in-nodejs
+
+====================================================================
+
+Lesson 88 - Introduction to Express.js
+
