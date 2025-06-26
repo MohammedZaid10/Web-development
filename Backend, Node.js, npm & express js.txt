@@ -20,7 +20,7 @@ Commands:
 npm init -y
 npm i express jsonwebtoken dotenv
 npm install --global nodemon
-nvm use 20
+npm use 20
 
 Change type to module from default common in package.json
 
@@ -33,4 +33,93 @@ https://nodejs.org/en/learn/manipulating-files/working-with-file-descriptors-in-
 ====================================================================
 
 Lesson 88 - Introduction to Express.js
+
+Agenda:
+Why should we use express?
+Why Nodemon?
+Installing Express@4
+Request parameters and queries
+Static Files
+
+
+Express documentation :
+https://expressjs.com/
+
+Query parameters and Request paramaters:
+app.get('/blog/:slug/', (req, res) => {
+  //logic to fetch intro to {slug} from db
+    // console.log(req);
+    console.log(req.params);
+    console.log(req.query);
+    // Example app listening on port 3000
+    // { slug: 'intro-to-padosi' }
+    // { mode: 'dark', region: 'in' }
+
+    res.send(`hello ${req.params.slug}`)
+})
+
+Static files :
+https://expressjs.com/en/starter/static-files.html
+
+make sure to always add this line in code for the files that you want to display to the user so that your backend code is not exposed to any user over your webpage, so in this case any file that is under the folder 'public' or 'files' will only be available for the user to see:
+app.use(express.static('public'))
+app.use(express.static('files'))
+
+====================================================================
+
+Lesson 89 - Response Request and Routers in Express
+
+Agenda:
+Handling post & other requests
+Chaining of requests
+Serving HTML files
+Installing Postman
+Express Router
+
+https://expressjs.com/en/guide/routing.html#routing
+
+====================================================================
+
+Lesson 90 - Middleware in Express
+
+https://expressjs.com/en/guide/writing-middleware.html
+
+Middleware are basically functions which run before a request and can be used for logging info, cookie validation & check if user is logged in.
+
+https://expressjs.com/en/guide/using-middleware.html
+
+An Express application can use the following types of middleware:
+
+Application-level middleware
+Router-level middleware
+Error-handling middleware
+Built-in middleware
+Third-party middleware
+
+====================================================================
+
+
+Lesson 91 - Excersice 15 - Clearing the clutter
+
+// You have to write a Node.js program to clear clutter inside of a directory and organize the contents of that directory into different folders
+
+// for example, these files become:
+
+// 1. name.jpg
+// 2. name.png
+// 3. this.pdf 
+// 4. harry.zip
+// 5. Rohan.zip
+// 6. cat.jpg 
+// 7. harry.pdf
+
+// this: 
+// jpg/name.jpg, jpg/cat.jpg 
+// png/name.png 
+// pdf/this.pdf pdf/harry.pdf
+// zip/harry.zip zip/Rohan.zip
+
+====================================================================
+
+Lesson 92 - ejs Template Engine in Express
 
