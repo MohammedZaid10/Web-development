@@ -166,3 +166,10 @@ So basically we can remove our entire navbar from our index.ejs and put it into 
 <a class="navbar-brand" href="#"><%= brand %></a>
 <a class="navbar-brand" href="#"><%= siteName %></a>
 
+====================================================================
+
+Lesson 94 - Installing MongoDB & MongoDB Compass
+
+use Sigma
+show databases
+db.Courses.find()
