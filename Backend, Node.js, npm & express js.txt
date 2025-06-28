@@ -18,7 +18,7 @@ Lesson 86 - CommonJs Vs EcmaScript Modules
 
 Commands:
 npm init -y
-npm i express jsonwebtoken dotenv
+npm i express@4 jsonwebtoken dotenv
 npm install --global nodemon
 npm use 20
 
@@ -122,4 +122,47 @@ Lesson 91 - Excersice 15 - Clearing the clutter
 ====================================================================
 
 Lesson 92 - ejs Template Engine in Express
+
+Using bootstarp whoch is a CSS framework (primarily HTML and CSS, with optional JavaScript components).
+Download bootstrap - https://getbootstrap.com/
+
+https://getbootstrap.com/docs/5.3/getting-started/introduction/
+
+https://getbootstrap.com/docs/5.3/components/navbar/
+
+code to send html file to express application : 
+res.sendFile('templates/blogpost.html', {root : __dirname})
+
+EJS stands for Embedded JavaScript. It is a simple, fast, and popular templating engine for Node.js. EJS is a template engine which helps running your same block of code and passing it to different html pages:
+
+  Purpose: EJS allows you to generate HTML markup with plain JavaScript. It solves the problem of how to embed dynamic data and logic into your web pages when rendering them on the server-side (e.g., using Node.js and Express.js).
+
+  Syntax (HTML-like with JS): The main reason for EJS's popularity is its familiar, HTML-like syntax. You write your EJS files largely as you would an HTML file, but you use special tags to embed JavaScript code and variables.
+  
+  Server-Side Rendering (SSR): EJS is primarily used for Server-Side Rendering (SSR). This means that your Node.js backend processes the EJS template with data, generates a complete HTML file, and then sends that HTML file to the client's web browser. The browser receives fully formed HTML and displays it.
+
+  Integration with Express.js: EJS integrates seamlessly with the Express.js framework. You configure Express to use EJS as its view engine, and then you can use res.render() in your routes to pass data to your EJS templates, which Express will then render and send as the HTTP response.
+
+ejs template engine(Read this fully) : https://ejs.co/
+
+How to use ejs with express(read this fully) : https://github.com/mde/ejs/wiki/Using-EJS-with-Express
+
+Write this line of code in express application so that we can tell express that we are gonna use a template engine which EJS:
+app.set('view engine', 'ejs');
+
+res.render is used instead of res.sendFile to render a code to a full html file:
+res.render('index', {siteName : siteName, searchText: searchText, arr}) 
+- no need to give index.ejs, only index is fine
+
+now for rendering change html to ejs extension and put it under views folder instead of template folder
+
+<%= siteName %>- inside your ejs file, use this syntax to call the value of variable 
+
+Partials in EJS are a great way to reuse common code (like headers and footers) across multiple views. They help make your code cleaner, more maintainable, and easier to update. Partials are especially useful when your website has a heavy frontend with lots of reusable components.
+So basically we can remove our entire navbar from our index.ejs and put it into a new navbar.ejs component and then we call the navbar using its class name which navbar here using below syntax:
+<%- include('navbar'); %>
+<%- include('navbar', {siteName: "Zaid"} ); %>
+<%- include('navbar', {brand: "Harry"} ); %>
+<a class="navbar-brand" href="#"><%= brand %></a>
+<a class="navbar-brand" href="#"><%= siteName %></a>
 
