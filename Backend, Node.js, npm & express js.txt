@@ -192,5 +192,10 @@ Lesson 96 - Installing Mongoose & Using it with Express
 
 Mongoose is a JavaScript library which provides a schema based solution. This means that type casting, data validation and query building becomes easy for us.
 
-There is a mongoDb package which can be used instead of Mongoose
+There is a mongoDb package which can be used instead of Mongoose, explore this package documentation:
+https://www.npmjs.com/package/mongodb
 
+so mongoose will basically help with schema enforcing like in a string data type we cannot insert integer data type which is possible in MongoDB
+
+Read this documentation to understand schematypes in mongoose and how to use required keyword and giving default values:
+https://mongoosejs.com/docs/schematypes.html
