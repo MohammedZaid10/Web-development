@@ -173,3 +173,24 @@ Lesson 94 - Installing MongoDB & MongoDB Compass
 use Sigma
 show databases
 db.Courses.find()
+
+====================================================================
+
+Lesson 95 - CRUD Operations in MongoDB
+
+Read the entire code as it has all CRUD operation commands used in MongoDB
+
+UPDATE command documentation:
+https://www.mongodb.com/docs/manual/reference/method/db.collection.updateone/
+
+Read and practise all query and projection operators:
+https://www.mongodb.com/docs/manual/reference/operator/query/
+
+====================================================================
+
+Lesson 96 - Installing Mongoose & Using it with Express
+
+Mongoose is a JavaScript library which provides a schema based solution. This means that type casting, data validation and query building becomes easy for us.
+
+There is a mongoDb package which can be used instead of Mongoose
+
