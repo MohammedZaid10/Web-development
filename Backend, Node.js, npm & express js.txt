@@ -199,3 +199,24 @@ so mongoose will basically help with schema enforcing like in a string data type
 
 Read this documentation to understand schematypes in mongoose and how to use required keyword and giving default values:
 https://mongoosejs.com/docs/schematypes.html
+
+====================================================================
+
+Lesson 97 - Excersice 16 - Dummy Data Generator
+
+Generate a dummy data in this format in a collection called employees in a db called company
+
+{
+    name: "Harry",
+    salary: 45000000,
+    language: "Python",
+    city: "New York",
+    isManager: true
+}
+
+Generate 10 such records when a button called generate data is clicked!
+Create an Express app with mongoose to acheive it
+Everytime the button is clicked, you should clear the collection 
+
+====================================================================
+
