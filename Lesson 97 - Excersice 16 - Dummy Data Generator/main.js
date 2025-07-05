@@ -13,7 +13,6 @@ const getRandom = (arr)=>{
     return arr[rno]
 }
 
-
 app.get('/', (req, res) => {
     res.render('index', { foo: 'FOO' });
 })
