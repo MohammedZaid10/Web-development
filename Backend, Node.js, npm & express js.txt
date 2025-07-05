@@ -220,3 +220,11 @@ Everytime the button is clicked, you should clear the collection
 
 ====================================================================
 
+ 
+Lesson 98 - Tailwind CSS in one Video
+
+https://tailwindcss.com/
+
+https://tailwindcss.com/docs/installation/play-cdn
+
+https://play.tailwindcss.com/
