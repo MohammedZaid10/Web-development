@@ -220,7 +220,6 @@ Everytime the button is clicked, you should clear the collection
 
 ====================================================================
 
- 
 Lesson 98 - Tailwind CSS in one Video
 
 https://tailwindcss.com/
@@ -267,4 +266,14 @@ xl	80rem (1280px)	@media (width >= 80rem) { ... }
 Appying directives:
 https://tailwindcss.com/docs/adding-custom-styles
 https://tailwindcss.com/docs/functions-and-directives#directives
+
+====================================================================
+
+Lesson 100 - Design this layout
+
+<!-- Design layout.png using node.js and tailwind css -->
+
+====================================================================
+
+Lesson 103 -What is Hosting? Where to Host? Which Hosting?
 
