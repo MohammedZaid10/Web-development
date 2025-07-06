@@ -1,3 +1,6 @@
+Backend, Node.js, npm, express js, middleware, ejs Template engine fo express, mongodb with compass, mongoose ORM,CRUD, tailwindcss, hosting, VPS, VPC, webserver(nginx with pm2/apache) & code execution
+
+
 Lesson 85 - Backend, Node.js & npm
 
 dont put node_modules folder in git
@@ -458,22 +461,31 @@ Easily manage/start/stop/restart Node.js apps.
 
 =======================================================================================
 
-Lesson 105 - Introduction to React and Why use React
+How a python code is read by CPU:
 
-We can useState in react so that something in DOM can be updated just by passing a a variable
-React allows us to break our page in different components
-There is a props concept which helps changing lets say colo9r of a component(nav bar)
+print("Hello")                ← Python source
+↓
+LOAD_NAME, LOAD_CONST, ...   ← Python Bytecode
+↓
+C switch(opcode) { ... }      ← CPython interpreter loop (C code)
+↓
+mov, call, ret, ...           ← C compiled to Machine Code
+↓
+10101000 00000100 ...         ← 1s and 0s executed by CPU
 
-React official doc : https://react.dev/
-Vite official doc : https://vite.dev/
+| Concept                              | Who "translates" it                                  |
+| ------------------------------------ | ---------------------------------------------------- |
+| **Python code (.py)**                | You write this manually                              |
+| **Python code → Bytecode (.pyc)**    | Python compiler (`compile()`, internally in CPython) |
+| **Bytecode → Executed Instructions** | CPython interpreter (written in C)                   |
+| **C code → Machine code**            | C compiler (e.g. `gcc`) *before runtime*             |
+| **Machine code → Binary**            | ❌ Nobody — machine code **is already binary**        |
+| **Binary → Executed by CPU**         | ✅ Directly read and executed by CPU circuitry        |
 
-https://react.dev/learn/build-a-react-app-from-scratch:
-  Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects:
-    npm create vite@latest my-app -- --template react
 
-Read the readme.md file
-
-=======================================================================================
-
-Lesson 106 - Components, Props and JSX in React
-
+| Concept                      | Who "translates" it              |
+| ---------------------------- | -------------------------------- |
+| **C code → Assembly**        | Compiler (e.g. `gcc`)            |
+| **Assembly → Machine code**  | Assembler                        |
+| **Machine code → Binary**    | ❌ Nobody — it's already binary   |
+| **Binary → Executed by CPU** | ✅ Directly read by CPU circuitry |
