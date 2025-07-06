@@ -10,7 +10,7 @@ function App() {
 
   return (
       <div className='App'>
-        <Navbar/>
+        <Navbar logoText="CodewithZaid"/>
         <div className="value">{count}</div>
         <button onClick={()=>{setValue(count + 1)}}>Click me</button>
         <Footer/>
