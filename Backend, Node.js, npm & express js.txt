@@ -228,3 +228,43 @@ https://tailwindcss.com/
 https://tailwindcss.com/docs/installation/play-cdn
 
 https://play.tailwindcss.com/
+
+tailwind css is a node.js package
+
+https://tailwindcss.com/docs/installation/tailwind-cli
+
+command to download tailwind.css:
+  1. npm init -y
+  2. npm install -D tailwindcss @tailwindcss/cli
+  3. @import "tailwindcss"; - in input.css
+  4. npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+  5. Then include the output.css in your HTML.
+  6. add this in your script in package.json:
+  "build" : "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  7. npm i vite
+  8. add this in your script in package.json:
+  "dev":"vite"
+  and then run "npm run build" in your terminal to initiate tailwind.css
+
+old way:
+  npm init -y
+  npm install -D tailwindcss@3 postcss autoprefixer
+  npx tailwindcss init
+
+another way, might not work:
+  npm install tailwindcss @tailwindcss/cli
+  @import "tailwindcss";
+  npx @tailwindcss/cli -i input.css -o output.css --watch (--watch is optional)
+
+https://tailwindcss.com/docs/responsive-design#using-custom-breakpoints
+Breakpoint prefix	Minimum width	CSS
+sm	40rem (640px)	@media (width >= 40rem) { ... }
+md	48rem (768px)	@media (width >= 48rem) { ... }
+lg	64rem (1024px)	@media (width >= 64rem) { ... }
+xl	80rem (1280px)	@media (width >= 80rem) { ... }
+2xl	96rem (1536px)	@media (width >= 96rem) { ... }
+
+Appying directives:
+https://tailwindcss.com/docs/adding-custom-styles
+https://tailwindcss.com/docs/functions-and-directives#directives
+
