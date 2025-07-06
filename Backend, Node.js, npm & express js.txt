@@ -277,3 +277,189 @@ Lesson 100 - Design this layout
 
 Lesson 103 -What is Hosting? Where to Host? Which Hosting?
 
+npm i dotenv
+
+Types of Hosting:
+  1. Shared Hosting
+  2. Dedicated Hosting
+  3. Managed Hosting
+
+Linux Tutorial: https://www.youtube.com/watch?v=_tCY-c-sPZc
+
+Using dotenv:
+https://www.npmjs.com/package/dotenv:
+  require('dotenv').config()
+  console.log(process.env) // remove this after you've confirmed it is working
+
+'''
+To host a index.html file on a server Ip address, we can do it by hosting on apache web-server:
+apt install apache2
+
+after downloading apache webserver it will create a folder "var/www"
+Go to the folder using "cd/var/www" folder and do ls
+and you will find a html folder, go inside the html folder and drop your html file there which you can by suing filezilla
+now when you open your IP address, you will the website hosted there
+
+Instead o using apache webserver, we can also nginx as our webserver and nginx also creates "var/www":
+apt install nginx
+nginx can be used as a reverse proxy
+reverse proxy means request will first come to nginx and then go to our node.js app
+so nginx as a layer and moves it to your app like a traffic controller
+'''
+====================================================================
+
+VPS hosting stands for Virtual Private Server hosting.
+
+It's a type of web hosting that offers a balance between shared hosting and dedicated hosting. Here's a breakdown of what that means:
+
+Virtualization: A powerful physical server is divided into multiple isolated virtual compartments. Each compartment functions as an independent server.
+
+Private Server: Although it's a "virtual" server, it acts like a dedicated server for your website or application. You get your own dedicated resources (CPU, RAM, storage) that are not shared with other users on the same physical machine. This means other websites' traffic or resource usage won't directly impact your site's performance.
+
+Root Access: You typically get root or administrator access to your VPS, allowing you to install your own operating system (Linux distributions like Ubuntu, CentOS, Debian, or Windows Server), customize server settings, and install any software you need. This offers much more control and flexibility than shared hosting.
+
+Scalability: VPS hosting is generally more scalable than shared hosting. You can often easily upgrade your CPU, RAM, or storage as your website's needs grow, without having to migrate to an entirely new server.
+
+Cost-Effective: It's more affordable than a dedicated server because you're still sharing the physical server's hardware costs with other VPS users, but you get a private, isolated environment.
+
+In simpler terms: Imagine a large apartment building (the physical server). In shared hosting, everyone shares one large apartment. In VPS hosting, you get your own individual apartment within the building, with your own locked door, kitchen, and bathroom (dedicated resources), even though you're still in the same building as others. In dedicated hosting, you'd own the entire building.
+
+VPS hosting is a popular choice for websites that have outgrown shared hosting but don't yet require the full resources or cost of a dedicated server.
+
+=======================================================================================
+
+That's an excellent question, as both terms use "Virtual Private" and are related to isolated environments, but they refer to different layers of abstraction and control in the cloud computing stack.
+
+No, VPS and VPC are not the same concept, though they are related when you use a cloud provider.
+
+Let's break down each:
+
+VPS (Virtual Private Server)
+Focus: Server Isolation
+
+What it is: A single, isolated virtual machine instance created by partitioning a physical server. You get dedicated compute resources (CPU, RAM) for that specific server. You typically have root access and manage the operating system and applications on that single server.
+
+Analogy: Think of it as getting your own dedicated apartment within a larger apartment building (the physical server). You control everything within your apartment, but you're still within one building.
+
+Context: Primarily a hosting model offered by hosting providers (like GoDaddy, DigitalOcean, Linode, Vultr) or even cloud providers, where the emphasis is on providing you a "slice" of a server that acts like your own.
+
+VPC (Virtual Private Cloud)
+Focus: Network Isolation and Configuration
+
+What it is: A logically isolated section of a public cloud provider's network (like AWS, Google Cloud Platform, Azure) where you can launch and run your cloud resources. It allows you to define your own virtual network environment, including your own IP address ranges, subnets, route tables, and network gateways.
+
+
+Analogy: Instead of just one apartment, a VPC is like getting your own private, customizable neighborhood or even a small town within a much larger city (the cloud provider's entire global infrastructure). You decide where the streets (subnets) go, where the fences (security groups) are, and how traffic flows (route tables).
+
+Context: An integral part of Infrastructure as a Service (IaaS) from major cloud providers. You launch various cloud resources (Virtual Machines, Databases, Load Balancers, serverless functions, etc.) within a VPC.
+
+Feature:        VPS (Virtual Private Server)                                                           VPC (Virtual Private Cloud)
+Primary Focus:  Single server isolation and dedicated resources.                                       Network isolation and configuration for multiple cloud resources.
+Scope:          Typically one virtual machine instance.                                                An entire isolated virtual network where many resources can reside.
+Managed By:     Often the hosting provider manages the hypervisor/physical server. You manage the VM.  You manage the network configuration within the cloud provider's infrastructure.
+Control Level:  Full control over the VM's OS and software.                                            Full control over network topology, security rules, and resource placement within that network.
+Providers:      Traditional hosting companies, some cloud providers.                                   Major public cloud providers (AWS, GCP, Azure).
+
+How they are related:
+When you create a Virtual Machine (VM) instance within AWS (which they call EC2 instances) or Google Cloud (Compute Engine instances), that VM is analogous to a VPS. However, this VM always resides within a VPC that you have configured (or a default one).
+
+So, you launch a VPS-like instance (a VM) into a VPC. The VPC provides the secure and isolated networking environment for all your resources, including your virtual servers.
+
+=======================================================================================
+
+Lesson 104 - Hosting an Express App on Ubuntu VPS using Hostinger
+
+Rea the readme.md file
+
+why to use nginx and cant we host website directly by uploading files to our ip address
+is a webserver actually just something that use to connect our ip address to our html file?
+why do we need to install an os like ubuntu on nginx?
+why do we need pm2
+
+=======================================================================================
+
+
+1. Why use NGINX? Can't we host a website directly by uploading files to our IP address?
+Short answer:
+You need software to serve your files over HTTP. Just having files on an IP address is not enough. That’s where web servers like NGINX or Apache come in.
+
+Detailed explanation:
+
+An IP address is just an identifier for a machine on a network (like your server).
+
+Your HTML/CSS/JS files are static files that need to be served using HTTP(S) protocol so browsers can fetch and display them.
+
+NGINX is a web server that listens for HTTP requests (like GET /index.html) and serves the correct file.
+
+Without a web server, your files are just sitting on a machine with no way for browsers to access them.
+
+So NO, you can't just upload files to an IP address and expect them to be served unless there’s a web server (like NGINX, Apache, etc.) running to handle requests.
+
+2. Is a web server just something that connects our IP address to our HTML file?
+Kind of — but it's more than that.
+
+A web server like NGINX:
+
+Listens for incoming requests on a port (usually 80/443).
+
+Parses the request (e.g., /about.html).
+
+Finds and returns the correct file or sends it to another backend (like Node.js).
+
+Can serve static files or act as a reverse proxy to dynamic apps (e.g., React frontend, Node.js backend).
+
+Handles load balancing, caching, compression (gzip), SSL (HTTPS), and more.
+
+✅ Think of it as middleware between the internet and your files/app.
+
+3. Why do we need to install an OS like Ubuntu to run NGINX?
+Because NGINX (and all web software) needs an OS to run.
+
+Your server (cloud, physical, or VPS) needs a base operating system like:
+
+Ubuntu, Debian, CentOS (Linux-based).
+
+Or even Windows (but less common for production servers).
+
+The OS provides the environment needed to:
+
+Install and run NGINX.
+
+Store files (HTML, images, etc.).
+
+Handle networking, security, and process management.
+
+Think of the OS as the foundation layer where everything else (like NGINX, Node.js, databases) lives.
+
+4. Why do we need PM2?
+PM2 is a process manager for Node.js applications.
+
+If you’re running a dynamic backend (e.g., Express.js app), you’ll need PM2 to:
+
+Keep the Node.js app running 24/7 (even after server restarts or crashes).
+
+Automatically restart if it crashes.
+
+Log errors and output.
+
+Run multiple instances (cluster mode) for better performance.
+
+Easily manage/start/stop/restart Node.js apps.
+
+🔧 Without PM2, you'd have to manually run node app.js and if it crashes, your site goes down.
+
+
+| Concept                       | Why It's Needed                                                    |
+| ----------------------------- | ------------------------------------------------------------------ |
+| **IP Address**                | Identifies your server. Doesn’t serve files on its own.            |
+| **Web Server (NGINX)**        | Serves files over HTTP. Acts as proxy/load balancer.               |
+| **Operating System (Ubuntu)** | Required to run web server software like NGINX or Node.js.         |
+| **PM2**                       | Keeps your Node.js app alive, handles restarts, logs, and scaling. |
+
+=======================================================================================
+
+Lesson 105 - Introduction to React and Why use React
+
+We can useState in react so that something in DOM can be updated just by passing a a variable
+React allows us to break our page in different components
+There is a props concept which helps changing lets say colo9r of a component(nav bar)
