@@ -474,3 +474,6 @@ https://react.dev/learn/build-a-react-app-from-scratch:
 Read the readme.md file
 
 =======================================================================================
+
+Lesson 106 - Components, Props and JSX in React
+
