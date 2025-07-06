@@ -277,3 +277,98 @@ Lesson 100 - Design this layout
 
 Lesson 103 -What is Hosting? Where to Host? Which Hosting?
 
+npm i dotenv
+
+Types of Hosting:
+  1. Shared Hosting
+  2. Dedicated Hosting
+  3. Managed Hosting
+
+Linux Tutorial: https://www.youtube.com/watch?v=_tCY-c-sPZc
+
+Using dotenv:
+https://www.npmjs.com/package/dotenv:
+  require('dotenv').config()
+  console.log(process.env) // remove this after you've confirmed it is working
+
+'''
+To host a index.html file on a server Ip address, we can do it by hosting on apache web-server:
+apt install apache2
+
+after downloading apache webserver it will create a folder "var/www"
+Go to the folder using "cd/var/www" folder and do ls
+and you will find a html folder, go inside the html folder and drop your html file there which you can by suing filezilla
+now when you open your IP address, you will the website hosted there
+
+Instead o using apache webserver, we can also nginx as our webserver and nginx also creates "var/www":
+apt install nginx
+nginx can be used as a reverse proxy
+reverse proxy means request will first come to nginx and then go to our node.js app
+so nginx as a layer and moves it to your app like a traffic controller
+'''
+====================================================================
+
+VPS hosting stands for Virtual Private Server hosting.
+
+It's a type of web hosting that offers a balance between shared hosting and dedicated hosting. Here's a breakdown of what that means:
+
+Virtualization: A powerful physical server is divided into multiple isolated virtual compartments. Each compartment functions as an independent server.
+
+Private Server: Although it's a "virtual" server, it acts like a dedicated server for your website or application. You get your own dedicated resources (CPU, RAM, storage) that are not shared with other users on the same physical machine. This means other websites' traffic or resource usage won't directly impact your site's performance.
+
+Root Access: You typically get root or administrator access to your VPS, allowing you to install your own operating system (Linux distributions like Ubuntu, CentOS, Debian, or Windows Server), customize server settings, and install any software you need. This offers much more control and flexibility than shared hosting.
+
+Scalability: VPS hosting is generally more scalable than shared hosting. You can often easily upgrade your CPU, RAM, or storage as your website's needs grow, without having to migrate to an entirely new server.
+
+Cost-Effective: It's more affordable than a dedicated server because you're still sharing the physical server's hardware costs with other VPS users, but you get a private, isolated environment.
+
+In simpler terms: Imagine a large apartment building (the physical server). In shared hosting, everyone shares one large apartment. In VPS hosting, you get your own individual apartment within the building, with your own locked door, kitchen, and bathroom (dedicated resources), even though you're still in the same building as others. In dedicated hosting, you'd own the entire building.
+
+VPS hosting is a popular choice for websites that have outgrown shared hosting but don't yet require the full resources or cost of a dedicated server.
+
+=======================================================================================
+
+That's an excellent question, as both terms use "Virtual Private" and are related to isolated environments, but they refer to different layers of abstraction and control in the cloud computing stack.
+
+No, VPS and VPC are not the same concept, though they are related when you use a cloud provider.
+
+Let's break down each:
+
+VPS (Virtual Private Server)
+Focus: Server Isolation
+
+What it is: A single, isolated virtual machine instance created by partitioning a physical server. You get dedicated compute resources (CPU, RAM) for that specific server. You typically have root access and manage the operating system and applications on that single server.
+
+
+
+Analogy: Think of it as getting your own dedicated apartment within a larger apartment building (the physical server). You control everything within your apartment, but you're still within one building.
+
+Context: Primarily a hosting model offered by hosting providers (like GoDaddy, DigitalOcean, Linode, Vultr) or even cloud providers, where the emphasis is on providing you a "slice" of a server that acts like your own.
+
+VPC (Virtual Private Cloud)
+Focus: Network Isolation and Configuration
+
+What it is: A logically isolated section of a public cloud provider's network (like AWS, Google Cloud Platform, Azure) where you can launch and run your cloud resources. It allows you to define your own virtual network environment, including your own IP address ranges, subnets, route tables, and network gateways.
+
+
+Analogy: Instead of just one apartment, a VPC is like getting your own private, customizable neighborhood or even a small town within a much larger city (the cloud provider's entire global infrastructure). You decide where the streets (subnets) go, where the fences (security groups) are, and how traffic flows (route tables).
+
+Context: An integral part of Infrastructure as a Service (IaaS) from major cloud providers. You launch various cloud resources (Virtual Machines, Databases, Load Balancers, serverless functions, etc.) within a VPC.
+
+Feature:        VPS (Virtual Private Server)                                                           VPC (Virtual Private Cloud)
+Primary Focus:  Single server isolation and dedicated resources.                                       Network isolation and configuration for multiple cloud resources.
+Scope:          Typically one virtual machine instance.                                                An entire isolated virtual network where many resources can reside.
+Managed By:     Often the hosting provider manages the hypervisor/physical server. You manage the VM.  You manage the network configuration within the cloud provider's infrastructure.
+Control Level:  Full control over the VM's OS and software.                                            Full control over network topology, security rules, and resource placement within that network.
+Providers:      Traditional hosting companies, some cloud providers.                                   Major public cloud providers (AWS, GCP, Azure).
+
+How they are related:
+When you create a Virtual Machine (VM) instance within AWS (which they call EC2 instances) or Google Cloud (Compute Engine instances), that VM is analogous to a VPS. However, this VM always resides within a VPC that you have configured (or a default one).
+
+So, you launch a VPS-like instance (a VM) into a VPC. The VPC provides the secure and isolated networking environment for all your resources, including your virtual servers.
+
+=======================================================================================
+
+Lesson 104 - Hosting an Express App on Ubuntu VPS using Hostinger
+
+Rea the readme.md file
