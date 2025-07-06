@@ -1,5 +1,11 @@
 ## How to host Node.js apps on Ubuntu
+```
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-20-04
+```
 
+```
+https://github.com/nodesource/distributions
+```
 ### Step 1 - Installing Node.js & build essentials
 ```
 curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash - &&\
@@ -59,4 +65,9 @@ sudo nginx -t
 Now restart using:
 ```
 sudo systemctl restart nginx
+```
+### Step 6 - How to point a domain to hostinger
+
+```
+https://support.hostinger.com/en/articles/1863967-how-to-point-a-domain-to-hostinger
 ```
