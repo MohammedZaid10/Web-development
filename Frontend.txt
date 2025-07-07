@@ -17,3 +17,81 @@ Read the readme.md file
 
 Lesson 106 - Components, Props and JSX in React
 
+Read the code fully to undertsand how components are built and how props are used as variables which are just referenced as objects
+
+From Chatgpt:
+============
+
+In React, props (short for "properties") are a fundamental mechanism for passing data from a parent component to a child component.
+
+Think of them as arguments you pass to a function, but for React components.
+
+What Exactly Are Props?
+1. Data Flow: They are the primary way to send data down the component tree. A parent component "owns" the data and passes it down to its children via props.
+
+2. Read-Only: Props are immutable (read-only). A child component can read the props it receives, but it should never directly modify them. If the data needs to change, that change should originate in the parent component (etypically through its state) and then be passed down as new props.
+
+3. Customizable and Reusable Components: Props enable you to make your components highly reusable. You can create a generic component (e.g., a Button component) and then customize its text, color, behavior, etc., by passing different props each time you use it, without rewriting the component's logic.
+
+4. Any JavaScript Data Type: You can pass any valid JavaScript data type as a prop:
+  Strings (<MyComponent name="Alice" />)
+  Numbers (<MyComponent age={30} />)
+  Booleans (<MyComponent isActive={true} />)
+  Arrays (<MyComponent items={['a', 'b']} />)
+  Objects (<MyComponent user={{ id: 1, name: 'Bob' }} />)
+  Functions (<MyComponent onClick={handleClick} />)
+  Even other React elements or components (<MyComponent><p>Child Content</p></MyComponent>) - this is often referred to as children prop.
+
+How to Pass Props (from Parent to Child):
+You pass props to a child component by including them as attributes in the JSX tag when you render the child component.
+
+// ParentComponent.js
+import React from 'react'
+import ChildComponent from './ChildComponent';
+
+function ParentComponent() {
+  const userName = "Alice";
+  const userAge = 30;
+
+  return (
+    <div>
+      <h1>Hello from Parent!</h1>
+      {/* Passing props like HTML attributes */}
+      <ChildComponent name={userName} age={userAge} />
+      <ChildComponent name="Bob" age={25} /> {/* You can also pass literal values */}
+    </div>
+  );
+}
+
+export default ParentComponent;
+
+How to Receive and Use Props (in Child Component):
+In a functional component, props are received as the first argument to the component function. It's usually an object containing all the passed props as key-value pairs. You can then access them using dot notation or object destructuring.
+
+// ChildComponent.js
+import React from 'react';
+
+// Receiving props as an object:
+// const ChildComponent = (props) => {
+//   return (
+//     <p>Name: {props.name}, Age: {props.age}</p>
+//   );
+// };
+
+// Receiving props using object destructuring (recommended for clarity):
+const ChildComponent = ({ name, age }) => {
+  return (
+    <div>
+      <p>Hello, my name is {name} and I am {age} years old.</p>
+    </div>
+  );
+};
+
+export default ChildComponent;
+
+
+=======================================================================================
+
+Lesson 107 - Hooks & State in React
+
+Hooks are basically functions which enhnace the capabilties of React Functional components like for example by adding some features 
