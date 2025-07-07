@@ -10,6 +10,9 @@ Vite official doc : https://vite.dev/
 https://react.dev/learn/build-a-react-app-from-scratch:
   Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects:
     npm create vite@latest my-app -- --template react
+    cd my-app
+    npm i
+    npm run dev
 
 Read the readme.md file
 
@@ -92,6 +95,8 @@ export default ChildComponent;
 
 =======================================================================================
 
-Lesson 107 - Hooks & State in React
+Lesson 107 - Hooks and State in React
 
 Hooks are basically functions which enhnace the capabilties of React Functional components like for example by adding some features 
+
+by being  in the functional components of react to access some react features
