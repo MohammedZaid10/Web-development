@@ -100,3 +100,54 @@ Lesson 107 - Hooks and State in React
 Hooks are basically functions which enhnace the capabilties of React Functional components like for example by adding some features 
 
 by being  in the functional components of react to access some react features
+
+we cannot just give let a = 5 and then create an arrow function () => a = a + 1 to update count as it will not render it as this is just plain simple javascript and we not update the dom which can only be done when we update the state that can be done only using useState hook
+
+=======================================================================================
+
+Lesson 108 - The useEffect Hook in React
+
+So whenever our component renders, we want something to happen like wa want some data to get fetched or our data gets logged, for this reason , we use useEffect
+
+In Navbar.jsx:
+  // Case 1 : Run on every render
+  useEffect(() => {
+      alert("hey i run on every render")
+  })
+  // when  we give without any second argument, this useeffect will run on every render 
+
+  // Case 2 : Run on first render
+  useEffect(() => {
+      alert("hey welcome to my page")
+  }, [])
+  // when  we give empty array, it means we want useeffect to work when nothing is changed  
+
+  // Case 3 : Run only when certain values changed
+  useEffect(() => {
+      alert("Color was changed")
+  }, [color]  
+
+  // Case 4 : Example of Cleanup function
+  useEffect(() => {
+      alert("hey, welcome to my page. This is the first render of app.jsx"  
+      return () => {
+          alert("Component was unmounted")
+      }
+  }, [])
+  // whenever we unmount a component we want to return something, then we use return function inside useEffects
+
+In app.jsx :
+  useEffect(() => {
+    alert("Count was changed")
+    setcolor(color + 1)
+  }, [count])
+  // count was changed will work even at the start when page renders as count also gets intialised to zero initailly
+
+-> Whenever one state chnages, then react re-renders the entire state 
+
+-> Read entire code
+
+=======================================================================================
+
+Lesson 109 - The useRef Hook in React
+
