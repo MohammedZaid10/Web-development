@@ -151,3 +151,22 @@ In app.jsx :
 
 Lesson 109 - The useRef Hook in React
 
+https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom
+
+We only useRef when that value is not being rendered through the DOM, iof it is being rendered through the DOM and used for displaying then we should not use useRef, we can use useState for that purpose to render any value in DOM
+
+1st use case of using useRef:
+Sometimes we want our variables to persist its values when page re-renders
+
+2nd use case of using useRef:
+we can access any DOM element by using variable.current
+
+Caveats 
+  1. You can mutate the ref.current property. Unlike state, it is mutable. However, if it holds an object that is used for rendering (for example, a piece of your state), then you shouldn’t mutate that object.
+  2. When you change the ref.current property, React does not re-render your component. React is not aware of when you change it because a ref is a plain JavaScript object.
+  3. Do not write or read ref.current during rendering, except for initialization. This makes your component’s behavior unpredictable.
+  4. In Strict Mode, React will call your component function twice in order to help you find accidental impurities. This is development-only behavior and does not affect production. Each ref object will be created twice, but one of the versions will be discarded. If your component function is pure (as it should be), this should not affect the behavior.
+
+=======================================================================================
+
+Lesson 110 - Conditional Rendering and Rendering Lists in React
