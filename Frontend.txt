@@ -206,3 +206,47 @@ Caveats
 
 Lesson 110 - Conditional Rendering and Rendering Lists in React
 
+Code for setting conditional rendering using ternanry operator and using && operator:
+
+  const [setshowbtn, setSetshowbtn] = useState(true)
+
+  {setshowbtn?<button>I will be shown when second button is clicked</button>: "thenga"} // Ternary operator
+  {setshowbtn?<button>setshowbtn is true</button>: <button>setshowbtn is false</button>} // Ternary operator
+  {setshowbtn && <button>setshowbtn is true</button>} // only if statement, shown only when state default value is true
+  <div className="card">
+    <button onClick={() => setSetshowbtn(!setshowbtn)}>
+      Toggle setshowbtn
+    </button>
+  </div>
+
+Code for Rendering List of json objects which is done using map function:
+  const [todos, setTodos] = useState([
+    {
+      title: "hey",
+      desc: "I am a good todo"
+    },
+    {
+      title: "hey another todo",
+      desc: "I am a another todo"
+    },
+    {
+      title: "hey another another todo",
+      desc: "I am a another another todo"
+    }
+  ])
+
+  {
+    todos.map(todo => {
+      // return <Todo key={todo.title} todo={todo} />
+      return <div key={todo.title} className="m-4 border-1 border-purple-700">
+      {/* we have to give a unique prop as a key like here we gave key={todo.title} for react because it is a requirement when we try and render a list */}
+      {/* dont put above div in next line or it will throw error, div should be in same line as return */}
+        <div className="todo">{todo.title}</div>
+        <div className="todo">{todo.desc}</div>
+      </div>
+    })
+  }
+
+=======================================================================================
+
+Lesson 112 - Handling Events in React
