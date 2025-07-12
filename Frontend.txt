@@ -132,9 +132,9 @@ export default ChildComponent;
 
 Lesson 107 - Hooks and State in React
 
-Hooks are basically functions which enhnace the capabilties of React Functional components like for example by adding some features 
+Hooks are basically functions which enhance the capabilties of React Functional components like for example by adding some features 
 
-by being  in the functional components of react to access some react features
+by being in the functional components of react to access some react features
 
 we cannot just give let a = 5 and then create an arrow function () => a = a + 1 to update count as it will not render it as this is just plain simple javascript and we not update the dom which can only be done when we update the state that can be done only using useState hook
 
@@ -142,7 +142,7 @@ we cannot just give let a = 5 and then create an arrow function () => a = a + 1 
 
 Lesson 108 - The useEffect Hook in React
 
-So whenever our component renders, we want something to happen like wa want some data to get fetched or our data gets logged, for this reason , we use useEffect
+So whenever our component renders, we want something to happen like we want some data to get fetched or our data gets logged, for this reason , we use useEffect
 
 In Navbar.jsx:
   // Case 1 : Run on every render
@@ -155,7 +155,7 @@ In Navbar.jsx:
   useEffect(() => {
       alert("hey welcome to my page")
   }, [])
-  // when  we give empty array, it means we want useeffect to work when nothing is changed  
+  // when we give empty array, it means we want useeffect to work when nothing is changed  
 
   // Case 3 : Run only when certain values changed
   useEffect(() => {
@@ -254,6 +254,12 @@ Lesson 111 - Exercise 18 - Displaying the card
 You have to use an api and display the data in the form of a card under a container. All the data points returned by the API should be converted to a card Use this API: https://jsonplaceholder.typicode.com/posts
 
 Hint: Create a state for the data which will be fetched using the Json Placeholder API Inside useEffect, use fetch to populate that state and then use map to render the cards from that state
+
+Logic :
+1. Our data is in json format, so we have to use map function to render each json data that we recieve which can be done by updating a state card using a function setCards
+2. We are putting the cards in a container, so that whenver new data is fetched it creates a new card
+3. Now for rendering, we have to use useEffect hook and call our function fetchdata which fetches the data so that whenever new data is fetched the virtual dom renders and displays our cards
+4. The fetchdata function should be a async &await arrow function which awaits and fetches the data from the endpoint and then awaits and stores it in json format in a variable data. We then call the setCards function from useState hook so that when each data is fetched it, the state cards gets changed which is being rendered in our virtual dom through the map function
 
 =======================================================================================
 
