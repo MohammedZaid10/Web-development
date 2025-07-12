@@ -1,3 +1,38 @@
+Tailwind + React :
+1. npm create vite@latest my-app -- --template react
+2. cd my-app
+3. npm install
+4. npm install -D tailwindcss @tailwindcss/vite
+5. Edit vite.config.ts : 
+    import { defineConfig } from 'vite'
+    import react from '@vitejs/plugin-react'
+    ***import tailwindcss from '@tailwindcss/vite'***
+
+    export default defineConfig({
+      plugins: [
+        react(),
+        ***tailwindcss()***,
+      ],
+    })
+6. In your main src/index.css, include:
+    @import "tailwindcss";
+7. Configure Tailwind (Optional) :
+      npx tailwindcss init
+  Then edit the generated tailwind.config.js to specify the content paths:
+    /** @type {import('tailwindcss').Config} */
+    export default {
+      content: [
+        "./index.html",
+        "./src/**/*.{js,ts,jsx,tsx}"
+      ],
+      theme: { extend: {} },
+      plugins: [],
+    }
+  This step is optional but useful for advanced customization
+8. npm run dev
+
+=======================================================================================
+
 Lesson 105 - Introduction to React and Why use React
 
 We can useState in react so that something in DOM can be updated just by passing a a variable
@@ -170,3 +205,4 @@ Caveats
 =======================================================================================
 
 Lesson 110 - Conditional Rendering and Rendering Lists in React
+
