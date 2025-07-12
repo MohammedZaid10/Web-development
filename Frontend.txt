@@ -250,3 +250,50 @@ Code for Rendering List of json objects which is done using map function:
 =======================================================================================
 
 Lesson 112 - Handling Events in React
+
+Button Event handling :
+  const handleClick = () => {
+    alert("I am clicked")
+  }
+
+  <div className="button">
+    <button onClick={handleClick}>Click me</button>
+  </div>
+
+Mouse Event Handling :
+  const handleMouse = () => {
+    alert("bye")
+  }
+
+  <div className="mouse" onMouseOver={handleMouse}>
+    I am mouse div
+  </div>
+
+Input Event Handling :
+  const [name, setName] = useState("harry")
+
+  const handleChange = (e) => {
+    setName(e.target.value)
+  }
+
+  <input type="text" value={name} onChange={handleChange} />
+
+Form Event Handling :
+  // const [form, setForm] = useState({email :"", phno : ""})
+  const [form, setForm] = useState({})
+
+  const handleChange = (e) => {
+    setForm({...form, [e.target.name]:e.target.value})
+    console.log(form)
+  }
+
+  // <input type="text" name='email' value={form.email} onChange={handleChange} />
+  // <input type="text" name='phno' value={form.phno} onChange={handleChange} />
+
+  // <input type="text" name='email' value={form?.email} onChange={handleChange} />
+  // <input type="text" name='phno' value={form?.phno} onChange={handleChange} />
+
+  <input type="text" name='email' value={form.email?form.email:""} onChange={handleChange}/>
+  <input type="text" name='phno' value={form.phno?form.phno:""} onChange={handleChange} />
+
+
