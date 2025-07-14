@@ -30,6 +30,7 @@ Tailwind + React :
     }
   This step is optional but useful for advanced customization
 8. npm run dev
+9. npm install react-router - if using react router
 
 =======================================================================================
 
@@ -339,4 +340,6 @@ main.jsx :
   }
 
 =======================================================================================
+
+Lesson 116 - The useContext hook in React
 
