@@ -35,6 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/user/:username",
+        // Dynamic routing
         element: <User />,
       },
     ],
