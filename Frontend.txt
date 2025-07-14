@@ -315,3 +315,28 @@ Form Event Handling :
 Lesson 115 - React Router - Routing in React
 
 npm install react-router
+
+Read code to understand react router
+
+Dynamic routing :
+Users.jsx : 
+  import { useParams } from "react-router";
+
+  export default function User() {
+      const params = useParams()
+      return (
+          <div>
+              I am user {params.username}
+          </div>
+      );
+  }
+
+main.jsx : 
+  {
+    path: "/user/:username",
+    // Dynamic routing
+    element: <User />,
+  }
+
+=======================================================================================
+

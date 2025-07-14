@@ -1,5 +1,7 @@
 import { useParams } from "react-router";
 
+// Dynamic routing 
+
 export default function User() {
     const params = useParams()
     return (
