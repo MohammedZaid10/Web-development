@@ -1,5 +1,6 @@
-Backend, Node.js, npm, express js, middleware, ejs Template engine fo express, mongodb with compass, mongoose ORM,CRUD, tailwindcss, hosting, VPS, VPC, webserver(nginx with pm2/apache) & code execution
+Backend, Node.js, npm, express js, middleware, ejs Template engine fo express, mongodb with compass, mongoose ORM, CRUD, tailwindcss, hosting, VPS, VPC, webserver(nginx with pm2/apache) & code execution
 
+====================================================================
 
 Lesson 85 - Backend, Node.js & npm
 
