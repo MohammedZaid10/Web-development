@@ -418,4 +418,26 @@ So to solve this solution we have useMemo hook to save(memoize) our state, so th
 
 =======================================================================================
 
-Lesson 118 - The useCallback hook in React
+Lesson 119 - Handling Forms and Connecting React to Express Backend
+
+memo is used inside a component(Navbar) so that re-rendering only happens when the prop being called in the component(Navbar) actually gets changed
+
+in JavaScript, even if two functions with different name doing the same operation, javascript still considers them as different functions
+
+So when an app re-renders even though the prop is already freezed when we used memo inside our component(Navbar), component(Navbar) will still get re-rendered as it will think it has recived a new prop as the function in the app component was re-rendered
+
+useCallback is used to freeze a function inside the App component when the App component re-renders
+
+Syntax : useCallback(
+    () => {
+      first
+    },
+    [second],
+  )
+  in second argument, we give the state that which will tell useCallback hook to ignore its functionality and re-render the app when the state of the second argument chnages. so when state in second argument chnages, app will re-render, so second argument is for exception
+
+  read code of app.jsx and navrbar.jsx 
+
+=======================================================================================
+
+Lesson 119 - Handling Forms and Connecting React to Express Backend
