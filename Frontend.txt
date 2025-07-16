@@ -385,3 +385,33 @@ Component1.jsx to import a state:
 
 Lesson 117 - The useMemo hook in React
 
+So whenever a state changes in react, your entire App re-renders
+So lets say if we have a very computation running, then it will make our app slow as that state will re-compute everytime
+So to solve this solution we have useMemo hook to save(memoize) our state, so the state is not computed again when app re-renders
+
+  const nums = new Array(600_000).fill(0).map((_, i) => {
+    return {
+      index: i,
+      isMagical: i === 500_000
+    }
+  })
+
+  const [numbers, setNumbers] = useState(nums)
+
+  Syntax : useMemo(() => first, [second])
+  const magical = useMemo(() => numbers.find(item => item.isMagical === true), [numbers])
+  // here the second argument is numbers and we are only giving it here because we are calling the setNumbers function in below button to update it again, so that the state is again re-saved(re-memoized) as we are updating the state numbers again by calling the setNumbers function in our button
+
+  <button onClick={() => {
+    setCount((count) => count + 1);
+    if (count == 10) {
+      setNumbers(
+        new Array(400_000).fill(0).map((_, i) => {
+          return {
+            index: i,
+            isMagical: i === 300_000
+          }
+        })
+      )
+    }
+  }}>
