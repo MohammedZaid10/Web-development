@@ -343,3 +343,45 @@ main.jsx :
 
 Lesson 116 - The useContext hook in React
 
+ContextAPI are used to call any props / state and state function directly in any of your pages/components using context provider
+
+Only about remembering syntax of how context api is created
+
+context.js:
+  import { createContext } from "react";
+  export const CounterContext = createContext(0)
+
+App.jsx:
+  import { CounterContext } from '../context/context'
+  <CounterContext.Provider value = {{count, setCount}}>
+  ..................
+  Provide the context to entire app
+  ..................
+  </CounterContext.Provider>
+
+Button.jsx to import state function:
+  import { CounterContext } from '../context/context'
+  const Button = ({count}) => {
+    const value = useContext(CounterContext)
+  return (
+    <div>
+      <button onClick={() => value.setCount((count) => count + 1)}><span><Component1 count={count} /></span> I am Button</button>
+    </div>
+    )
+  }
+
+Component1.jsx to import a state:
+  import { CounterContext } from '../context/context'
+  const Component1 = () => {
+    const value = useContext(CounterContext)
+  return (
+    <div>
+      {value.count}
+    </div>
+    )
+  }
+
+=======================================================================================
+
+Lesson 117 - The useMemo hook in React
+
