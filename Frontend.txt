@@ -415,3 +415,7 @@ So to solve this solution we have useMemo hook to save(memoize) our state, so th
       )
     }
   }}>
+
+=======================================================================================
+
+Lesson 118 - The useCallback hook in React
