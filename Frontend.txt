@@ -446,3 +446,13 @@ Lesson 119 - Handling Forms and Connecting React to Express Backend
 https://react-hook-form.com/
 
 npm install react-hook-form
+
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
+npm i cors
+https://www.npmjs.com/package/cors
+app.use(cors()) 
+
+npm i body-parser
+https://www.npmjs.com/package/body-parser
+app.use(bodyParser.json())
