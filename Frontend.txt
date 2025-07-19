@@ -34,6 +34,7 @@ Tailwind + React :
 10. npm install react-hook-form
 11. npm install @reduxjs/toolkit react-redux
 12. npx create-next-app@latest
+13. code -r myapp - to open current folder in new VS code
 
 =======================================================================================
 
@@ -490,3 +491,6 @@ npx create-next-app@latest
 Read code
 
 =======================================================================================
+
+Lesson 122 - Server Components in Next.js
+
