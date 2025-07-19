@@ -32,6 +32,7 @@ Tailwind + React :
 8. npm run dev
 9. npm install react-router - if using react router
 10. npm install react-hook-form
+11. npm install @reduxjs/toolkit react-redux
 
 =======================================================================================
 
@@ -456,3 +457,17 @@ app.use(cors())
 npm i body-parser
 https://www.npmjs.com/package/body-parser
 app.use(bodyParser.json())
+
+Read code
+
+=======================================================================================
+
+Lesson 120 - Redux
+
+https://redux.js.org/
+
+https://redux-toolkit.js.org/
+
+npm install @reduxjs/toolkit react-redux
+
+https://redux-toolkit.js.org/tutorials/quick-start
