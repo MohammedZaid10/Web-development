@@ -494,3 +494,32 @@ Read code
 
 Lesson 122 - Server Components in Next.js
 
+For undertsanding, if we do console.log:
+if it being shown in terminal then its running on server side
+if it is showing on browser console page then its running on client side
+
+"use client" - use this show code on client side
+
+page.jsx:
+  // import { useState, useEffect } from "react";
+  import fs from "fs/promises"
+  import Navbar from "@/components/Navbar"
+
+  export default function Home() {
+    // const [count, setCount] = useState(0)
+    console.log("Hey I am harry")
+    let a = fs.readFile(".gitignore")
+    a.then(e=>{console.log(e.toString())})
+    return (
+    <div>
+      <Navbar/>
+      I am a component 
+      {/* {count} */}
+      {/* <button onClick={()=> setCount(count + 1)}>Click me</button> */}
+    </div>
+    );
+  }
+
+=======================================================================================
+
+Lesson 123 - Script, Link and Image components in Next.js
