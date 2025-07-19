@@ -1,9 +1,13 @@
 import React from 'react'
 
-const page = () => {
-  return (
-    <div>I am about</div>
-  )
+const about = () => {
+    return (
+        <div className="min-h-screen flex items-center justify-center">
+            <div className="p-8 text-center">
+                <h1 className="text-3xl font-bold">I am about</h1>
+            </div>
+        </div>
+    )
 }
 
-export default page
+export default about

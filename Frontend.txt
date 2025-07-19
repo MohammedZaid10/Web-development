@@ -487,3 +487,6 @@ Lesson 121 - Introduction to Next.js and File based routing
 
 npx create-next-app@latest
 
+Read code
+
+=======================================================================================
