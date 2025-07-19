@@ -33,6 +33,7 @@ Tailwind + React :
 9. npm install react-router - if using react router
 10. npm install react-hook-form
 11. npm install @reduxjs/toolkit react-redux
+12. npx create-next-app@latest
 
 =======================================================================================
 
@@ -481,4 +482,8 @@ Read about action, reducer & store in redux:
   https://stackoverflow.com/questions/54385323/what-is-a-difference-between-action-reducer-and-store-in-redux
 
 =======================================================================================
+
+Lesson 121 - Introduction to Next.js and File based routing
+
+npx create-next-app@latest
 
