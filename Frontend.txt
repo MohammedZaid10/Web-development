@@ -471,3 +471,14 @@ https://redux-toolkit.js.org/
 npm install @reduxjs/toolkit react-redux
 
 https://redux-toolkit.js.org/tutorials/quick-start
+
+Redux store is a single source of truth where our states gets loaded
+
+Redux slice means that you want to store a particular thing and we want to write a function related to it
+reducer helps in chnaging our state which takes an initial state and helps in returning a new state
+
+Read about action, reducer & store in redux:
+  https://stackoverflow.com/questions/54385323/what-is-a-difference-between-action-reducer-and-store-in-redux
+
+=======================================================================================
+
