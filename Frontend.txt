@@ -781,3 +781,8 @@ page.jsx :
 
 Lesson 125 - Server Actions in Next.js
 
+when PHP was used, one thing was very appreciated that our HTML file and code like handlinmg POSt request all was in one file
+
+and server actions is an attempt to bring the same functionality to modern javascript
+
+So lets say we have a form and we want to submit some data through that form in our server and the way we used to do it is by using an API by using useEffect hook which has a function which will send that data to the server
