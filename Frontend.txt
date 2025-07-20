@@ -821,6 +821,7 @@ Lesson 126 - Middleware in Next.js
 
 Next.js Middleware documentation : https://nextjs.org/docs/app/getting-started/route-handlers-and-middleware#middleware
 
+Syntax:
   import { NextResponse } from 'next/server'
   
   // This function can be marked `async` if using `await` inside
@@ -832,3 +833,8 @@ Next.js Middleware documentation : https://nextjs.org/docs/app/getting-started/r
   export const config = {
     matcher: '/about/:path*',
   }
+
+Read middleware.js code which is created in outermost folder
+
+=======================================================================================
+
