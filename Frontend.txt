@@ -786,3 +786,49 @@ when PHP was used, one thing was very appreciated that our HTML file and code li
 and server actions is an attempt to bring the same functionality to modern javascript
 
 So lets say we have a form and we want to submit some data through that form in our server and the way we used to do it is by using an API by using useEffect hook which has a function which will send that data to the server
+
+page.jsx:
+  "use client"
+  import { useRef } from "react";
+  import { submitAction } from "@/actions/form";
+
+  export default function Home() {
+    let ref = useRef()
+    return (
+      <div className="w-2/3 mx-auto my-12">
+        <form ref={ref} action={(e) => { submitAction(e); ref.current.reset()}}>
+          <div><label htmlFor="name">Name</label> <input name="name" id="name" className="text-white mx-4 border border-white px-3 m-2" type="text" /></div>
+          <div><label htmlFor="add">Address</label> <input name="add" id="add" className="text-white mx-4 border border-white px-3 m-2" type="text" /></div>
+          <div><button className="border border-white px-3 m-2">Submit</button></div>
+        </form>
+      </div>
+    );
+  }
+
+form.js:
+  "use server";
+
+  import fs from "fs/promises";
+
+  export const submitAction = async (e) => {
+      console.log(e.get("name"), e.get("add"))
+      let a = await fs.appendFile("harry.txt", `Name is ${e.get("name")} and Address is ${e.get("add")} \n`)
+  }
+
+=======================================================================================
+
+Lesson 126 - Middleware in Next.js
+
+Next.js Middleware documentation : https://nextjs.org/docs/app/getting-started/route-handlers-and-middleware#middleware
+
+  import { NextResponse } from 'next/server'
+  
+  // This function can be marked `async` if using `await` inside
+  export function middleware(request) {
+    return NextResponse.redirect(new URL('/home', request.url))
+  }
+  
+  // See "Matching Paths" below to learn more
+  export const config = {
+    matcher: '/about/:path*',
+  }
