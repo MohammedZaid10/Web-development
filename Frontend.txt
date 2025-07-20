@@ -716,3 +716,65 @@ useEffect: Best for side effects that are part of your component's logic (like s
 next/script: Primarily designed to manage loading external, third-party scripts (like Google Analytics, Stripe, etc.), giving you control over when they load with the strategy prop.
 
 Both methods solve the problem, but for a simple alert, most developers would reach for useEffect. Thank you for the correction.
+
+=======================================================================================
+
+Lesson 124 - Creating APIs in Next.js
+
+https://nextjs.org/docs/app/api-reference/file-conventions/route
+
+  export async function GET(request) {}
+  
+  export async function HEAD(request) {}
+  
+  export async function POST(request) {}
+  
+  export async function PUT(request) {}
+  
+  export async function DELETE(request) {}
+  
+  export async function PATCH(request) {}
+  
+  // If `OPTIONS` is not defined, Next.js will automatically implement `OPTIONS` and set the appropriate Response `Allow` header depending on the other methods defined in the Route Handler.
+  export async function OPTIONS(request) {}
+
+The api routes are created in next.js specifically inside /app/api/route.js
+
+route.js :
+  import { NextResponse } from "next/server";
+
+  export async function POST(request) {
+    let data = await request.json()
+    console.log(data)
+    // return NextResponse.json({success:true,data: "yes"}) // if we just want to show this response {success:true,data: "yes"} on client side
+    return NextResponse.json({success:true,data}) // if we want to show data on client side
+  }
+
+page.jsx :
+  "use client"
+
+  export default function Home() {
+    const handleClick = async () => {
+      let data = {
+        name: "Zaid",
+        job: "Coder"
+      }
+      let a = await fetch("/api/add", {
+        method: "POST", headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+      let res = await a.json()
+      console.log(res)
+    }
+
+    return (
+      <div>
+        <h1 className="text-xl font-bold">Next.js API routes demo</h1>
+        <button onClick={handleClick}>Click Me</button>
+      </div>
+    );
+  }
+
+=======================================================================================
