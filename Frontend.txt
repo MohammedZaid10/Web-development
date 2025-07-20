@@ -38,6 +38,111 @@ Tailwind + React :
 
 =======================================================================================
 
+In the Software Development Life Cycle (SDLC), testing is a critical phase to ensure the quality, reliability, and performance of the software. Different types of testing are performed at various stages to validate different aspects of the application.
+
+Here’s a breakdown of the most common types of testing, categorized by their purpose and when they occur.
+
+### I. Testing Levels (The V-Model Sequence)
+
+These tests are typically performed in a specific order, corresponding to the stages of development.
+
+1.  **Unit Testing**
+    * **What it is:** The first level of testing, where individual components or modules of the software are tested in isolation.
+    * **Who does it:** Developers.
+    * **Purpose:** To verify that each small piece of code (a function, method, or class) works correctly on its own.
+    * **Example:** Testing a function `calculate_sum(a, b)` to ensure it returns the correct sum for various inputs, including positive numbers, negative numbers, and zero.
+
+2.  **Integration Testing**
+    * **What it is:** After units are tested, they are combined into groups, and the interaction between them is tested.
+    * **Who does it:** Developers or specialized QA engineers.
+    * **Purpose:** To find defects in the interfaces and interactions between integrated components.
+    * **Example:** Testing the login process where the UI module must correctly send user credentials to an authentication module, which then interacts with a database module.
+
+3.  **System Testing**
+    * **What it is:** Testing the complete and fully integrated software product as a whole.
+    * **Who does it:** The QA team.
+    * **Purpose:** To evaluate the system's compliance with all the specified functional and non-functional requirements. It's a "black-box" test, meaning the tester focuses on inputs and outputs without knowing the internal code structure.
+    * **Example:** Testing an entire e-commerce website: Browse products, adding to the cart, applying a discount, checking out, making a payment, and receiving an order confirmation email.
+
+4.  **User Acceptance Testing (UAT)**
+    * **What it is:** The final stage of testing, where the software is tested in the "real world" by the intended audience or client.
+    * **Who does it:** End-users, clients, or stakeholders.
+    * **Purpose:** To certify that the system meets the business requirements and is ready for deployment.
+    * **Types of UAT:**
+        * **Alpha Testing:** Performed in-house by the organization's employees before the software is released to the public.
+        * **Beta Testing:** Performed by a limited number of actual end-users in their own environment.
+
+---
+
+### II. Testing Categories by Purpose
+
+These types of testing can be applied at any of the levels above (Integration, System, or UAT).
+
+#### A. Functional Testing
+This category focuses on **what the system does**, verifying that each function of the software operates in conformance with the requirement specifications.
+
+* **GUI Testing:** Ensures the graphical user interface meets its requirements, checking elements like buttons, text fields, and menus.
+* **API Testing:** Validates that the Application Programming Interfaces (APIs) work as expected in terms of functionality, reliability, and security.
+* **Database Testing:** Checks the integrity of data in the database, ensuring data is stored, retrieved, and updated correctly.
+
+#### B. Non-Functional Testing
+This category focuses on **how the system performs**, testing the quality attributes and readiness of the software.
+
+* **Performance Testing:**
+    * **Load Testing:** Checks the system's performance under expected user loads.
+    * **Stress Testing:** Pushes the system beyond its normal operating limits to see how it handles extreme conditions and whether it recovers gracefully.
+    * **Scalability Testing:** Determines how well the system can scale up to handle an increase in user load.
+    * **Endurance Testing:** Tests the system with a sustained, significant load over a long period to check for issues like memory leaks.
+
+* **Security Testing:** Uncovers vulnerabilities, threats, and risks in the software application to prevent malicious attacks.
+
+* **Usability Testing:** Evaluates how easy, efficient, and user-friendly the software is for the end-users.
+
+* **Compatibility Testing:** Ensures the software works correctly across different browsers, operating systems, hardware platforms, and network environments.
+
+* **Reliability Testing:** Assesses whether the software can perform its function without failure for a specified time in a given environment.
+
+---
+
+### III. Testing Related to Code Changes
+
+These are specific types of tests run in response to modifications in the code.
+
+1.  **Smoke Testing** (or Build Verification Testing)
+    * **What it is:** A preliminary set of tests run on a new software build.
+    * **Purpose:** To determine if the most critical functions of the program work. If the smoke test fails, the build is rejected immediately, saving the QA team's time. It answers the question: "Is this build stable enough for further testing?"
+
+2.  **Sanity Testing**
+    * **What it is:** A quick, focused test on a specific area of functionality that has recently been changed or fixed.
+    * **Purpose:** To verify that the bug fix or new feature is working correctly and hasn't obviously broken its immediate surroundings. It's a subset of regression testing.
+
+3.  **Regression Testing**
+    * **What it is:** Re-running functional and non-functional tests after a code change.
+    * **Purpose:** To ensure that new code, bug fixes, or other changes have not introduced new defects or broken any existing functionality. This is crucial for maintaining stability in continuous development cycles.
+
+### Summary Table
+
+Category         | Testing Type        | Purpose
+-----------------|---------------------|------------------------------------------------------------
+Testing Levels   | Unit Testing        | Test individual components in isolation.
+                 | Integration Testing | Test interactions between integrated components.
+                 | System Testing      | Test the entire application as a whole against requirements.
+                 | User Acceptance     | Validate that the system is acceptable to the end-user/client.
+                 | Testing             
+-----------------|---------------------|------------------------------------------------------------
+Functional       | GUI, API, Database  | Verify what the system does (features and functions).
+-----------------|---------------------|------------------------------------------------------------
+Non-Functional   | Performance,        | Verify how well the system performs (quality attributes).
+                 | Security, Usability |
+-----------------|---------------------|------------------------------------------------------------
+Change-Related   | Smoke Testing       | Check if a new build is stable enough for further testing.
+                 | Sanity Testing      | Check if a specific fix or change works as expected.
+                 | Regression Testing  | Ensure new changes haven't broken existing functionality.
+
+A successful SDLC employs a mix of these testing types to build a robust and high-quality software product.
+
+=======================================================================================
+
 Lesson 105 - Introduction to React and Why use React
 
 We can useState in react so that something in DOM can be updated just by passing a a variable
@@ -523,3 +628,91 @@ page.jsx:
 =======================================================================================
 
 Lesson 123 - Script, Link and Image components in Next.js
+
+Link in next.js : https://nextjs.org/docs/app/api-reference/components/link:
+  We have to use 'Link' instad of 'a'
+
+Navbar.jsx : 
+  import React from 'react'
+  import Link from 'next/link' // added
+
+  const Navbar = () => {
+    return (
+      <nav className='flex justify-between px-4 bg-slate-800 text-white py-4'>
+          <div className="logo font-bold">Facebook</div>
+          <ul className='flex gap-6'>
+              <Link href='/'><li>Home</li></Link>
+              <Link href='/about'><li>About</li></Link>
+              <Link href='/contact'><li>Contact</li></Link>
+          </ul>
+      </nav>
+    )
+  }
+
+  export default Navbar
+
+Scripts in Next.js : https://nextjs.org/docs/app/api-reference/components/script#strategy
+// make sure S in Script is capital
+
+page.jsx in contact foler ;
+
+  import React from 'react';
+  import Script from "next/script"; // added
+
+  export const metadata = {
+      title: "Contact Facebook",
+      description: "This is Facebook Contact Page",
+  };
+
+  const contact = () => {
+      return (
+          <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+              <Script>{`alert ("Welcome to Script page")`}</Script> // added
+              <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+                  <h1 className="text-xl">This is contact page</h1>
+              </main>
+          </div>
+      )
+  }
+
+  export default contact
+
+Image in Next.js : https://nextjs.org/docs/app/api-reference/components/image
+
+Edit next.config.mjs file to allow website from where this image is being called from :
+  /** @type {import('next').NextConfig} */
+  const nextConfig = {
+      images: {
+          remotePatterns: [
+            {
+              protocol: 'http',
+              hostname: 'www.menucool.com',
+              port: '', 
+            },
+          ],
+        },
+  };
+
+  export default nextConfig;
+
+page.jsx under app folder:
+  import Image from "next/image"; // added
+
+  export default function Home() {
+    
+
+    return (
+      <div className="container my-5 size-80 bg-red-300 relative">
+        <Image className="mx-auto object-cover " fill={true} src="http://www.menucool.com/slider/prod/image-slider-3.jpg" alt="" />
+      </div>
+    );
+  }
+
+useEffect vs. next/script
+While using the <Script> component for inline code works, the more common and standard React pattern for running component-specific logic is still the useEffect hook.
+
+useEffect: Best for side effects that are part of your component's logic (like showing an alert, fetching data for that specific component, setting up a subscription).
+
+next/script: Primarily designed to manage loading external, third-party scripts (like Google Analytics, Stripe, etc.), giving you control over when they load with the strategy prop.
+
+Both methods solve the problem, but for a simple alert, most developers would reach for useEffect. Thank you for the correction.
