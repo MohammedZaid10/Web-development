@@ -920,5 +920,72 @@ page.js :
 
 =======================================================================================
 
-Lesson 128 - Dynamic Routes in Next.js
+Lesson 128 - Dynamic Routes, Designing 404 Page, Error handling and To log page url endpoints in an array through dynamic routes in Next.js
+
+1. Dynamic Routes :
+https://nextjs.org/docs/app/api-reference/file-conventions/dynamic-routes
+
+app\blogpost\[slug]\page.jsx:
+  export default async function Page({ params }) {
+    const { slug } = await params // This would now be correct for Next.js 15+
+    return <div>My Post: {slug}</div>
+  }
+
+2. Designing 404 page:
+https://nextjs.org/docs/app/api-reference/file-conventions/not-found
+
+in outermost, not-found.jsx :
+  import Link from 'next/link'
+ 
+  export default function NotFound() {
+    return (
+      <div className="text-center">
+          <h2 className="text-4xl font-bold mb-4">Not Found</h2>
+          <p className="text-lg text-gray-600">Could not find requested resource</p>
+          <Link href="/" className="text-blue-500 hover:underline">Return Home</Link>
+      </div>
+    )
+  }
+
+3. Error handling for any error that we made through our code so that it gives the user try again option in the web page which they can click to re-render the page to see if issue gets fixed:
+https://nextjs.org/docs/app/getting-started/error-handling
+
+in outermost, error.jsx :
+  'use client' // Error components must be Client Components
+
+  import { useEffect } from 'react'
+
+  export default function Error({ error, reset }) {
+      useEffect(() => {
+          // Log the error to an error reporting service
+          console.error(error)
+      }, [error])
+
+      return (
+          <div>
+              <h2>Something went wrong!</h2>
+              <button
+                  onClick={
+                      // Attempt to recover by trying to re-render the segment
+                      () => reset()
+                  }
+              >
+                  Try again
+              </button>
+          </div>
+      )
+  }
+
+4. To log page url endpoints in an array through dynamic routes:
+
+app\about\[...val]\page.jsx:
+  export default async function Page({ params }) {
+    const resolvedParams = await params; 
+    console.log(resolvedParams.val); 
+    return <div>I am about page check console</div>;
+  }
+
+Navigate to a URL like http://localhost:3000/about/test/this/out, and then check your server console. You should see an array logged!
+
+=======================================================================================
 
