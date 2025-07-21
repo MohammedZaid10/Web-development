@@ -998,3 +998,76 @@ and then for each page inside folder, we can make a seperate layout.jsx file als
 read code
 
 =======================================================================================
+
+Lesson 132 - Understanding next or navigation module in Next.js
+
+Next Navigation documentation : https://nextjs.org/docs/app/getting-started/linking-and-navigating
+
+usePathname :
+We use usePathname when we want to know in which path we are inside
+
+Navbar.jsx:
+  "use client"
+  import React from 'react'
+  import { usePathname } from "next/navigation"; //added
+
+  const Navbar = () => {
+      const pathname = usePathname() // added
+      return (
+          <div>
+              <div>Navbar</div>
+              <div>You are inside {pathname}</div>
+          </div>
+      )
+  }
+
+  export default Navbar
+
+useParams:
+
+useRouter:
+We can also use Link to go to a website, but lets i want to programmatically go to a link using useEffect after lets say 3 seconds or after an onCLick of a button then useRouter is used to go to that link
+
+code for useParams and useRouter in app\blogpost\[slug]\page.jsx:
+  "use client"
+  import React, { useEffect } from 'react'
+  import { useParams } from 'next/navigation'
+  import { useRouter } from 'next/navigation'
+
+  const page = () => {
+      const params = useParams()
+      const router = useRouter()
+
+      useEffect(() => {
+          setTimeout(() => { 
+              router.push('/dashboard')
+          }, 2333);
+      }, [])
+      
+    return (
+      <div>{params.slug}
+      <button type="button" onClick={() => router.push('/dashboard')}>
+        Dashboard
+      </button>
+      </div>
+    )
+  }
+
+useSearchParams:
+it is used to know in which page you are and to know which utm_source you are in:
+http://localhost:3000/blog=harry&utm_source=facebook
+
+page.jsx:
+  "use client"
+
+  import Image from "next/image";
+  import { useSearchParams } from "next/navigation";
+
+  export default function Home() {
+    const searchparms = useSearchParams()
+    return (
+      <div>
+        Hey this is our page and blog is {searchparms.get('blog')} and utm source is {searchparms.get('utm_source')}
+      </div>
+    );
+  }
