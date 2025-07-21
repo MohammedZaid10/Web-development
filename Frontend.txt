@@ -989,3 +989,12 @@ Navigate to a URL like http://localhost:3000/about/test/this/out, and then check
 
 =======================================================================================
 
+Lesson 129 - Layouts in Next.js
+
+If we put our pages in a folder which is inside a parenthesis (admin) then it will not considered in our URL but this can help in making our folder structure better
+
+and then for each page inside folder, we can make a seperate layout.jsx file also and call it for our pages by nesting it through the children
+
+read code
+
+=======================================================================================
