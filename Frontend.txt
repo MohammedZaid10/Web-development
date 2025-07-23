@@ -1124,5 +1124,60 @@ page.jsx:
   NEXT_PUBLIC_ID=harry
   SECRET=harry123456
   NAME=Shubham
-  
+
+=======================================================================================
+
+Lesson 135 - Styled JSX and other ways to Style in Next.js
+
+Style JSX documentation : https://nextjs.org/blog/styling-next-with-styled-jsx
+
+my-app/styles/Home.module.css:
+  .red{
+      color: red;
+  }
+
+page.jsx will take from above path if required:
+  import Image from "next/image";
+  import styles from "../styles/home.module.css"
+
+  export default function Home() {
+    return (
+      <div className={styles.red}>
+        Hey
+      </div>
+    );
+  }
+
+in my-app/app/about/page.jsx, we can use style jsx which is a library of Next.js fraemwork to add style to local blocks:
+  "use client"
+  import React from 'react'
+
+  const About = () => {
+      return (
+          <div>
+
+              <div className='container'>
+
+                  <h1>This is about me</h1>
+                  <p>Hey I am a good boy</p>
+
+                  <style jsx>{`
+              .container{
+                  background-color: red;
+                  color: green;
+                  }
+                  `}
+                  </style>
+              </div>
+              <div className="container">
+                  Hey I am good
+              </div>
+          </div>
+      )
+  }
+
+  export default About
+
+Change <style jsx> to <style jsx global> if you want style to get added globally
+
 =======================================================================================
