@@ -1104,3 +1104,25 @@ let data = await fetch('https://api.vercel.app/blog',  { cache: 'no-store' })
 Read code in page.jsx
 
 =======================================================================================
+
+Lesson 134 - Environment Variables in Next.js
+
+This is how to display env file variables in server side or client side
+
+page.jsx:
+  export default function Home() {
+    // console.log("The id is: ", process.env.ID)
+    // console.log("The secret is: ", process.env.SECRET)
+    return (
+      <div>
+        Hey this is home. The id is {process.env.NEXT_PUBLIC_ID} and secret is {process.env.SECRET} and name is {process.env.NAME}
+      </div>
+    );
+  }
+
+.env file : 
+  NEXT_PUBLIC_ID=harry
+  SECRET=harry123456
+  NAME=Shubham
+  
+=======================================================================================
