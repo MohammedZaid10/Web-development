@@ -1071,3 +1071,36 @@ page.jsx:
       </div>
     );
   }
+
+=======================================================================================
+
+Lesson 133 - SSR, SSG and ISR in Next.js
+
+## SSR - Server Side Rendering
+This is default behaviour
+
+## SSG - Static Site Generation
+Any content which does not have network calls is a static page by default
+
+## ISG or ISR
+fetch in next.js caches the response
+To opt out use:
+```
+export const dynamic = 'force-dynamic';
+```
+However, there are exceptions, fetch requests are not cached when:
+
+- Used inside a Server Action.
+- Used inside a Route Handler that uses the POST method.
+
+Incremental Static Generation or Incremental Static Regeneration : https://nextjs.org/docs/app/getting-started/fetching-data
+
+to re-fetch every hour:
+let data = await fetch('https://api.vercel.app/blog',  { next: { revalidate: 3600 } })
+
+to stop caching:
+let data = await fetch('https://api.vercel.app/blog',  { cache: 'no-store' })
+
+Read code in page.jsx
+
+=======================================================================================
